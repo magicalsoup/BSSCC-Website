@@ -18,7 +18,7 @@
   font-style: normal;
 }
 
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -30,18 +30,17 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
+} */
 
 img {
   max-width: 100%;
   display: block;
+}
+
+.white-to-blue-gradient {
+  background: linear-gradient(89.95deg, rgba(226, 232, 240, 0.9) -12.79%, rgba(255, 255, 255, 0) 180.54%), linear-gradient(270deg, rgba(125, 211, 252, 0.9) -12.13%, rgba(255, 255, 255, 0) 178.47%), linear-gradient(270deg, rgba(165, 243, 252, 0.9) 111.93%, rgba(255, 255, 255, 0) 175.65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent;  */
 }

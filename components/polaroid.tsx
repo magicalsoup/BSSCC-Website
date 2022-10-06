@@ -1,4 +1,3 @@
-
 export default function Polaroid(props) {
     return (
         <div className="bg-white">
@@ -8,7 +7,6 @@ export default function Polaroid(props) {
                     {props.name}
                 </div>
             </div>
-            
         </div>
     )
 }

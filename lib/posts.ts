@@ -23,15 +23,25 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string })
+      ...(matterResult.data as { 
+        date: string; 
+        title: string; 
+        authors: string;
+        imgSrc: string; 
+        blurb: string;
+        priority: number;
+      })
     }
   })
   // Sort posts by date
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
+    // console.log(a.priority + " " + b.priority);
+    if (a.priority == b.priority) {
+      if(a.date > b.date) return 1;
+      else return -1;
     } else {
-      return -1
+      if(a.priority > b.priority) return -1; // if a has higher priority than b
+      else return 1;
     }
   })
 }
@@ -64,6 +74,12 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string })
+    ...(matterResult.data as {         
+      date: string; 
+      title: string; 
+      authors: string;
+      imgSrc: string; 
+      blurb: string;
+    })
   }
 }
