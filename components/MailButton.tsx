@@ -1,13 +1,15 @@
-export default function MailButton({backgroundColor, textColor, text, outline,}: {
-    backgroundColor: string;
-    textColor: string;
+import Link from "next/link";
+export default function MailButton({text, linkTo, tailwindCSS}: {
     text: string;
-    outline: string;
+    linkTo: string;
+    tailwindCSS: string;
 }) {
-    const style = `w-fit ${backgroundColor} ${textColor} ${outline} px-2 py-2 font-bold text-lg rounded`;
+    const style = `w-fit ${tailwindCSS} font-bold text-lg rounded`;
     
     return (
-        <button className={style}>{text}</button>
+        <Link href={linkTo}>
+            <button className={style}>{text}</button>
+        </Link>
     )
 }
 

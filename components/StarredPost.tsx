@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Date from "./date";
+import Date from "./Date";
 export default function StarredPost({post,} : {
     post: {
         date: string;
@@ -11,7 +11,7 @@ export default function StarredPost({post,} : {
     }
 }) {
     return (
-        <Link href={`/posts/${post.id}`}>
+        <Link href={`/blog/${post.id}`}>
             <a className="flex flex-col bg-blue-gray-700 w-full"> 
                 <img src={post.imgSrc} className="max-h-96 object-cover"/>
                 <div className="bg-transparent p-4">

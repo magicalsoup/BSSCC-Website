@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Date from "./date";
+import Date from "./Date";
 export default function NormalPost({post}: {
     post: {
         date: string;
@@ -11,10 +11,10 @@ export default function NormalPost({post}: {
     }
 }) {
     return (
-        <Link href={`/posts/${post.id}`}>
+        <Link href={`/blog/${post.id}`}>
             <a className="flex flex-col bg-blue-gray-700 w-1/2"> 
                 <img src={post.imgSrc} className="h-72 object-cover"/>
-                <div className="flex flex-col h-full p-4">
+                <div className="flex flex-col p-4">
                     <div className="flex flex-row space-x-2 text-gray-300 text-xs">
                         <p>{post.authors}</p>
                         <span>|</span>

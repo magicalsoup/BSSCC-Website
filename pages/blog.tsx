@@ -4,6 +4,7 @@ import { GetStaticProps } from "next";
 import StarredPost from "../components/StarredPost";
 import NormalPost from "../components/NormalPost";
 import MailButton from "../components/MailButton";
+import Navbar from "../components/Navbar";
 
 export default function Home({
   allPostsData,
@@ -27,10 +28,11 @@ export default function Home({
         <Head>
             <title>{blogName}</title>
         </Head>
+        <Navbar/>
         <main>
             <div className="flex flex-col bg-blue-gray-900 py-20">
                 <div className="bg-white backdrop-blur-2xl py-20"> {/*TODO add background img*/}
-                    <div className="flex flex-col bg-black/70 w-full py-6 px-20">
+                    <div className="flex flex-col bg-black/70 w-full py-6 px-32">
                         <h1 className="text-5xl font-bold blue-to-white-gradient py-2">
                             {blogName}
                         </h1>
@@ -39,14 +41,13 @@ export default function Home({
                             Discover and learn new tech from our talented executives and members.
                         </p>
                         <MailButton
-                            backgroundColor={"bg-pink-500"}
-                            textColor={"text-white"}
-                            text={"Join our Mailing List"}
-                            outline={""}
+                            text="Join our Mailing List"
+                            tailwindCSS="bg-pink-500 text-white p-2"
+                            linkTo="http://google.com"
                         />
                     </div>
                 </div>
-                <div className="flex flex-col space-y-12 items-center p-20">
+                <div className="flex flex-col space-y-12 items-center px-32 py-20">
                     <StarredPost post={starredPost}/>
                     <div className="flex w-full space-x-6">
                         {allPostsData.slice(1).map((item, index) => 

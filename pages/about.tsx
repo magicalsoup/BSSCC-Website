@@ -1,9 +1,13 @@
+import AccordionItem from "../components/AccordionItem";
 import Polaroid from "../components/Polaroid";
 import Head from "next/head"
 import { useState, useEffect } from "react";
+import PresidentCard from "../components/PresidentCard";
+import Navbar from "../components/Navbar";
 
 export default function About() {
 
+    // dummy data
     let questions = [
 
         {
@@ -40,14 +44,16 @@ export default function About() {
                 }
             })
         }
-    })
+    },[]);
+
     return (
         <>
             <Head>
                 <title>What is BSSCC?</title> 
             </Head>
+            <Navbar/>
             <main>
-                <div className="flex flex-col bg-blue-gray-900 py-20 px-24">
+                <div className="flex flex-col bg-blue-gray-900 py-20 px-32">
                     <div className="flex space-x-16 pb-24">
                         <div className="flex flex-col w-1/2">
                             <h1 className="py-4 text-5xl text-white">
@@ -74,45 +80,19 @@ export default function About() {
                             Meet Our Team
                         </h1>
 
-                        <div className="flex space-x-16 w-full">
-                            <div className="w-1/3">
-                                <Polaroid imgSrc={"https://qph.cf2.quoracdn.net/main-qimg-603a70b456b433931e2fbd534710ca95-lq"}
-                                name={"Austin Zeng"}
-                                />
-                            </div>
-                            
-                            <div className="flex flex-col w-1/2 pl-12">
-                                <h1 className="text-4xl text-pink-400">
-                                    President
-                                </h1>
-                                <p className="text-lg text-white">
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                                    ex ea commodo consequat. 
-                                </p>
-                            </div>
-                        </div>
+                        <PresidentCard 
+                            photoSrc={"https://qph.cf2.quoracdn.net/main-qimg-603a70b456b433931e2fbd534710ca95-lq"}
+                            name={"Austin Zeng"}
+                            description={"life is nice."}
+                            flexDirection={""}
+                        />
 
-                        <div className="flex space-x-16 w-full">   
-                            <div className="flex flex-col w-1/2 pr-12">
-                                <h1 className="text-4xl text-pink-400">
-                                    President
-                                </h1>
-                                <p className="text-lg text-white">
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                                    ex ea commodo consequat. 
-                                </p>
-                            </div>
-                            <div className="w-1/3">
-                                <Polaroid 
-                                imgSrc={"https://wallpapercave.com/wp/wp7151694.png"}
-                                name={"Derrick Ha"}
-                                /> 
-                            </div>
-                        </div>
+                        <PresidentCard 
+                            photoSrc={"https://wallpapercave.com/wp/wp7151694.png"}
+                            name={"Derrick Ha"}
+                            description={"life is very nice."}
+                            flexDirection={"flex-row-reverse"}
+                        />
                     </div>
 
                     <div className=""> {/* TODO add 'image carousel'for exec members*/}
@@ -123,35 +103,12 @@ export default function About() {
                         <h1 className="text-5xl py-8 font-bold white-to-blue-gradient">
                             Frequently Asked Questions
                         </h1>
-
-                            {questions.map((item, index) => 
-                                <div className="py-2" key={index}>
-                                    <div className="accordion flex text-2xl py-2">
-                                        <button className="pr-12 text-5xl mb-2">+</button>
-                                        <button className="inline-block align-text-bottom">{item.title}</button>
-                                    </div>
-                                    <p className="panel pl-20 text-gray-300"> 
-                                        {item.content}
-                                    </p>
-                                </div>
-                            )}
-                        
-                        </div>
+                        {questions.map((item, index) => 
+                            <AccordionItem item={item} index={index}/>
+                        )}
+                    </div>
                 </div>
             </main>
-        <style jsx>{`
-            .accordion {
-                background-color: transparent;
-                color: white;   
-            }
-         
-            .panel {
-                background-color: transparent;
-                overflow: hidden;
-                max-height: 0;
-                transition: max-height 0.2s ease-out;
-            }
-        `}</style>
         </>
     )
 }
