@@ -54,9 +54,9 @@ export default function About() {
             <Navbar/>
             <main>
                 <div className="flex flex-col bg-blue-gray-900 py-20 px-32">
-                    <div className="flex space-x-16 pb-24">
+                    <div className="flex space-x-16 py-24">
                         <div className="flex flex-col w-1/2">
-                            <h1 className="py-4 text-5xl text-white">
+                            <h1 className="py-4 text-5xl white-to-pink-gradient ">
                                 Our Mission
                             </h1>
                             <p className="py-4 text-lg text-white">
@@ -76,7 +76,7 @@ export default function About() {
                     </div>
 
                     <div className="flex flex-col space-y-16">
-                        <h1 className="w-full text-center text-5xl text-white">
+                        <h1 className="w-full text-center text-5xl white-to-pink-gradient ">
                             Meet Our Team
                         </h1>
 

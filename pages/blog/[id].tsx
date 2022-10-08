@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllBlogIds, getBlogData } from '../../lib/posts'
 import Link from 'next/link'
 import Head from 'next/head'
 import Date from '../../components/Date'
@@ -49,7 +49,7 @@ export default function Post({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds()
+  const paths = getAllBlogIds()
   return {
     paths,
     fallback: false
@@ -57,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostData(params.id as string)
+  const postData = await getBlogData(params.id as string)
   return {
     props: {
       postData

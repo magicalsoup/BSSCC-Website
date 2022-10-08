@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedBlogData } from "../lib/posts";
 import { GetStaticProps } from "next";
 import StarredPost from "../components/StarredPost";
 import NormalPost from "../components/NormalPost";
@@ -7,22 +7,22 @@ import MailButton from "../components/MailButton";
 import Navbar from "../components/Navbar";
 
 export default function Home({
-  allPostsData,
+  allBlogData,
     }: {
-    allPostsData: {
+    allBlogData: {
         date: string;
         title: string;
         id: string;
         authors: string;
         imgSrc: string;
         blurb: string;
+        type: string;
     }[];
-    }) {
+}) {
         
     const blogName = "{Closing Bracket}"
-    const starredPost = allPostsData? allPostsData[0] : null; // TODO need to swap null with a dummy in case there are no posts
+    const starredPost = allBlogData? allBlogData[0] : null; // TODO need to swap null with a dummy in case there are no posts
                                                               // TODO need to change sort function in lib/posts.ts to put starred posts at the front
-    
     return (
         <>
         <Head>
@@ -50,7 +50,7 @@ export default function Home({
                 <div className="flex flex-col space-y-12 items-center px-32 py-20">
                     <StarredPost post={starredPost}/>
                     <div className="flex w-full space-x-6">
-                        {allPostsData.slice(1).map((item, index) => 
+                        {allBlogData.slice(1).map((item, index) => 
                             <NormalPost post={item} key={index}/>
                         )}
                     </div>
@@ -72,10 +72,11 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const allBlogData = getSortedBlogData();
+
   return {
     props: {
-      allPostsData,
+        allBlogData,
     },
   };
 };

@@ -44,3 +44,11 @@ img {
   background-clip: text;
   /* text-fill-color: transparent;  */
 }
+
+.white-to-pink-gradient {
+  background: linear-gradient(269.95deg, rgba(251, 113, 133, 0.9) -5.24%, rgba(251, 113, 133, 0) 145.45%), linear-gradient(90deg, #D4D4D8 -29.72%, rgba(212, 212, 216, 0) 129.36%), linear-gradient(270deg, #EB1C65 47.59%, rgba(235, 28, 101, 0) 259.43%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+}

@@ -1,11 +1,25 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import MailButton from "../components/MailButton";
 import Navbar from "../components/Navbar";
 import Polaroid from "../components/Polaroid";
 import UpdateBoard from "../components/UpdateBoard";
+import { getAllSortedPostsData } from "../lib/posts";
 
-export default function Home() {
+export default function Home({
+  allPostsData,
+    }: {
+    allPostsData: {
+        date: string;
+        title: string;
+        id: string;
+        authors: string;
+        imgSrc: string;
+        blurb: string;
+        type: string;
+    }[];
+}) {
+
   return (
     <>
       <Head>
@@ -45,7 +59,7 @@ export default function Home() {
 
           <div className="flex flex-col">
               <h1 className="text-white text-3xl font-bold py-12">Recent Updates</h1>
-              <UpdateBoard/>
+              <UpdateBoard allPostsData={allPostsData}/>
           </div>
           
           <div className="flex flex-col">
@@ -71,3 +85,12 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getAllSortedPostsData();
+  return {
+    props: {
+        allPostsData,
+    },
+  };
+};
