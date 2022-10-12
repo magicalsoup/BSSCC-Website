@@ -27,11 +27,11 @@ export default function Home({
       </Head>
       <Navbar/>
       <main>
-        <div className="flex flex-col space-y-28 bg-blue-gray-900 py-20 px-32">
+        <div className="flex flex-col space-y-28 bg-blue-gray-900 p-32">
 
           <div className="flex justify-between">
             <div className="flex flex-col">
-              <h1 className="leading-relaxed text-5xl font-bold white-to-blue-gradient py-4">
+              <h1 className="leading-relaxed text-5xl font-bold white-to-blue-gradient py-4 font-raleway">
                 Bayview's <br></br>
                 student-organized <br></br>
                 computing community
@@ -58,13 +58,13 @@ export default function Home({
 
 
           <div className="flex flex-col">
-              <h1 className="text-white text-3xl font-bold py-12">Recent Updates</h1>
+              <h1 className="text-white text-3xl font-bold py-12 font-raleway">Recent Updates</h1>
               <UpdateBoard allPostsData={allPostsData}/>
           </div>
           
           <div className="flex flex-col">
-            <h1 className="text-white text-3xl font-bold">Join our Mailing List</h1>
-            <p className="text-white py-8 text-lg">
+            <h1 className="text-white text-3xl font-bold font-raleway">Join our Mailing List</h1>
+            <p className="text-white py-8 text-lg font-dmsans">
               Join our mailing list to recieve email notifications about important news and upcoming events!
             </p>
             <MailButton
@@ -75,8 +75,8 @@ export default function Home({
           </div>
 
           <div className="flex flex-col">
-            <h1 className="text-white text-3xl font-bold">Connect With Us!</h1>
-            <p className="text-white py-8 text-lg">Drop by any of our social media outlets to learn more about us, 
+            <h1 className="text-white text-3xl font-bold font-raleway">Connect With Us!</h1>
+            <p className="text-white py-8 text-lg font-dmsans">Drop by any of our social media outlets to learn more about us, 
               keep up-to-date with our upcoming events or to chat with our members!
             </p>
           </div>

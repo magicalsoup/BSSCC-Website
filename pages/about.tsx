@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import PresidentCard from "../components/PresidentCard";
 import Navbar from "../components/Navbar";
 
-export default function About() {
+export default function Home() {
 
     // dummy data
     let questions = [
@@ -49,34 +49,34 @@ export default function About() {
     return (
         <>
             <Head>
-                <title>What is BSSCC?</title> 
+                <title>Who we are</title> 
             </Head>
             <Navbar/>
             <main>
-                <div className="flex flex-col bg-blue-gray-900 py-20 px-32">
-                    <div className="flex space-x-16 py-24">
-                        <div className="flex flex-col w-1/2">
-                            <h1 className="py-4 text-5xl white-to-pink-gradient ">
+                <div className="flex flex-col bg-blue-gray-900 p-32">
+                    <div className="flex justify-between py-12">
+                        <div className="flex flex-col max-w-lg">
+                            <h1 className="py-4 text-5xl white-to-pink-gradient font-raleway">
                                 Our Mission
                             </h1>
-                            <p className="py-4 text-lg text-white">
+                            <p className="py-4 text-lg text-white font-dmsans">
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
                                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
                                 voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
                                 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                             </p>
-                            <h1 className="text-pink-600 text-xl pl-8 italic">
+                            <h1 className="text-pink-600 text-xl pl-8 italic font-raleway">
                                 - BSSCC '22 Team
                             </h1>
                         </div>
-                        <div className="w-1/2 pt-12">
+                        <div className="pt-12 max-w-lg">
                             <Polaroid imgSrc={"https://images8.alphacoders.com/749/749455.png"} />
                         </div>
                     </div>
 
-                    <div className="flex flex-col space-y-16">
-                        <h1 className="w-full text-center text-5xl white-to-pink-gradient ">
+                    <div className="flex flex-col space-y-16 py-32">
+                        <h1 className="w-full text-center text-5xl white-to-pink-gradient font-raleway">
                             Meet Our Team
                         </h1>
 
@@ -99,8 +99,8 @@ export default function About() {
                         
                     </div>
 
-                    <div className="flex flex-col py-20">
-                        <h1 className="text-5xl py-8 font-bold white-to-blue-gradient">
+                    <div className="flex flex-col">
+                        <h1 className="text-5xl py-8 font-bold white-to-blue-gradient font-raleway">
                             Frequently Asked Questions
                         </h1>
                         {questions.map((item, index) => 

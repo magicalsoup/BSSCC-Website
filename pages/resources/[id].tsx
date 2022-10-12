@@ -22,7 +22,6 @@ export default function Post({
       </Head>
       <main>
         <div className="flex flex-col items-center py-20 px-24">
-
           <div className="flex flex-col space-y-6 text-center py-8">
             <h1 className="font-bold text-3xl">{postData.title}</h1>
             <div className="flex justify-center text-sm">
@@ -38,13 +37,10 @@ export default function Post({
           </div>
           <div className="py-12 prose prose-xl">
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-            <Link href="/blogs">
-              <a className="text-sky-600 font-bold">← Back to Blogs</a>
+            <Link href="/resources">
+              <a className="text-sky-600 font-bold">← Back to Resources</a>
             </Link>
           </div>
-
-
-
         </div>
       </main>
     </>

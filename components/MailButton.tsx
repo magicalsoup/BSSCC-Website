@@ -4,7 +4,7 @@ export default function MailButton({text, linkTo, tailwindCSS}: {
     linkTo: string;
     tailwindCSS: string;
 }) {
-    const style = `w-fit ${tailwindCSS} font-bold text-lg rounded`;
+    const style = `w-fit ${tailwindCSS} font-bold text-lg rounded font-raleway`;
     
     return (
         <Link href={linkTo}>

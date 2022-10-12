@@ -9,6 +9,10 @@ module.exports = {
       colors: {
         "blue-gray-700": "#334155",
         "blue-gray-900": "#0F172A",
+      },
+      fontFamily: {
+        dmsans: ["DM Sans", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"]
       }
     },
   },

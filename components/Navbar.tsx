@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div className="flex fixed w-full items-center bg-blue-gray-900 pl-12 py-4 z-40">
+        <div className="flex fixed w-full items-center bg-blue-gray-900 pl-12 py-4 z-40 font-raleway">
             <Link href="/">
                 <a className="px-12">
                     <img src="..\Blob (white).png" className="w-16"></img>

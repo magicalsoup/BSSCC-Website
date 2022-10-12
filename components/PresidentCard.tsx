@@ -18,10 +18,10 @@ export default function PresidentCard({name, photoSrc, description, flexDirectio
             </div>
 
             <div className="flex flex-col w-1/2">
-                <h1 className="text-4xl text-pink-400 py-4">
+                <h1 className="text-4xl text-pink-400 py-4 font-raleway">
                     President
                 </h1>
-                <p className="text-lg text-white">
+                <p className="text-lg text-white font-dmsans">
                     {description}
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

@@ -14,7 +14,7 @@ export function getAllSortedPostsData() {
 
   const sortedResources = getSortedResourcesData()
 
-  // join the both posts into one array 
+  // join the both postsData into one array 
   const allPostsData = sortedResources.concat(sortedBlogs)
 
   return allPostsData;
@@ -50,7 +50,6 @@ export function getSortedBlogData() {
   })
   // Sort posts by date
   return allBlogData.sort((a, b) => {
-    // console.log(a.priority + " " + b.priority);
     if (a.priority == b.priority) {
       if(a.date > b.date) return 1;
       else return -1;
@@ -91,7 +90,6 @@ export function getSortedResourcesData() {
   })
   // Sort posts by date
   return allResourcesData.sort((a, b) => {
-    // console.log(a.priority + " " + b.priority);
     if (a.priority == b.priority) {
       if(a.date > b.date) return 1;
       else return -1;

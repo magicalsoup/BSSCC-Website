@@ -15,15 +15,15 @@ export default function NormalPost({post}: {
             <a className="flex flex-col bg-blue-gray-700 w-1/2"> 
                 <img src={post.imgSrc} className="h-72 object-cover"/>
                 <div className="flex flex-col p-4">
-                    <div className="flex flex-row space-x-2 text-gray-300 text-xs">
+                    <div className="flex flex-row space-x-2 text-gray-300 text-xs font-dmsans">
                         <p>{post.authors}</p>
                         <span>|</span>
                         <Date dateString={post.date}/>
                     </div>
-                    <h1 className="font-bold text-xl text-gray-300 py-2">
+                    <h1 className="font-bold text-xl text-gray-300 py-2 font-raleway">
                         {post.title}
                     </h1>
-                    <p className="text-gray-200  text-base">
+                    <p className="text-gray-200 text-base font-dmsans">
                         {post.blurb}
                     </p>
                 </div>

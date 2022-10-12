@@ -21,8 +21,8 @@ export default function Home({
 }) {
         
     const blogName = "{Closing Bracket}"
-    const starredPost = allBlogData? allBlogData[0] : null; // TODO need to swap null with a dummy in case there are no posts
-                                                              // TODO need to change sort function in lib/posts.ts to put starred posts at the front
+    // TODO need to swap null with a dummy in case there are no posts
+    const starredPost = allBlogData? allBlogData[0] : null; 
     return (
         <>
         <Head>
@@ -33,11 +33,11 @@ export default function Home({
             <div className="flex flex-col bg-blue-gray-900 py-20">
                 <div className="bg-white backdrop-blur-2xl py-20"> {/*TODO add background img*/}
                     <div className="flex flex-col bg-black/70 w-full py-6 px-32">
-                        <h1 className="text-5xl font-bold blue-to-white-gradient py-2">
+                        <h1 className="text-5xl font-bold blue-to-white-gradient py-2 font-raleway">
                             {blogName}
                         </h1>
-                        <p className="text-xl text-pink-600">Read, Learn, Implement.</p>
-                        <p className="text-xl py-4 text-white">
+                        <p className="text-xl text-pink-600 font-dmsans">Read, Learn, Implement.</p>
+                        <p className="text-xl py-4 text-white font-dmsans">
                             Discover and learn new tech from our talented executives and members.
                         </p>
                         <MailButton
