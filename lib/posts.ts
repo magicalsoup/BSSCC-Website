@@ -11,13 +11,15 @@ const blogDirectory = path.join(process.cwd(), 'posts/blog')
 export function getAllSortedPostsData() {
 
   const sortedBlogs = getSortedBlogData()
-
-  const sortedResources = getSortedResourcesData()
+  const sortedResources = getAllResourcesData()
 
   // join the both postsData into one array 
   const allPostsData = sortedResources.concat(sortedBlogs)
 
-  return allPostsData;
+  return allPostsData.sort((a, b) => {
+    if(a.date > b.date) return 1
+    else return -1
+  })
 } 
 
 export function getSortedBlogData() {
@@ -51,30 +53,27 @@ export function getSortedBlogData() {
   // Sort posts by date
   return allBlogData.sort((a, b) => {
     if (a.priority == b.priority) {
-      if(a.date > b.date) return 1;
-      else return -1;
+      if(a.date > b.date) return 1
+      else return -1
     } else {
-      if(a.priority > b.priority) return -1; // if a has higher priority than b
-      else return 1;
+      if(a.priority > b.priority) return -1 // if a has higher priority than b
+      else return 1
     }
   })
 }
 
-export function getSortedResourcesData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(resourcesDirectory)
-  const allResourcesData = fileNames.map(fileName => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '')
+export function getSortedResourcesData(section: string) {
 
-    // Read markdown file as string
-    const fullPath = path.join(resourcesDirectory, fileName)
+  const resourcesSectionDirectory = `${resourcesDirectory}/${section}`
+
+  const fileNames = fs.readdirSync(resourcesSectionDirectory)
+  const resourcesData = fileNames.map(fileName => {
+    const id = fileName.replace(/\.md$/, '')
+    const fullPath = path.join(resourcesSectionDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
-    // Combine the data with the id
     return {
       id,
       ...(matterResult.data as { 
@@ -83,20 +82,37 @@ export function getSortedResourcesData() {
         authors: string;
         imgSrc: string; 
         blurb: string;
-        priority: number;
         type: string;
       })
     }
   })
+
+  return resourcesData.sort((a, b) => {
+    if(a.date > b.date) return 1
+    else return -1
+  })
+
+}
+
+export function getAllResourcesData() {
+  // Get file names under /posts
+  const folderNames = fs.readdirSync(resourcesDirectory)
+  // join all the data together
+  let allResourcesData = []
+
+  folderNames.forEach(folderName => {
+    const sectionData = getSortedResourcesData(folderName)
+    sectionData.forEach(file => {
+      allResourcesData.push(file)
+    })
+  })
+
+
+  console.log(allResourcesData)
   // Sort posts by date
   return allResourcesData.sort((a, b) => {
-    if (a.priority == b.priority) {
-      if(a.date > b.date) return 1;
-      else return -1;
-    } else {
-      if(a.priority > b.priority) return -1; // if a has higher priority than b
-      else return 1;
-    }
+    if(a.date > b.date) return 1;
+    else return -1;
   })
 }
 
@@ -111,8 +127,8 @@ export function getAllBlogIds() {
   })
 }
 
-export function getAllResourceIds() {
-  const fileNames = fs.readdirSync(resourcesDirectory)
+export function getResourceIds(section: string) {
+  const fileNames = fs.readdirSync(`${resourcesDirectory}/${section}`)
   return fileNames.map(fileName => {
     return {
       params: {
@@ -120,6 +136,25 @@ export function getAllResourceIds() {
       }
     }
   })
+}
+
+export function getResourceSections() {
+  const folderNames = fs.readdirSync(resourcesDirectory)
+  return folderNames.map(folderName => {
+    return {
+      params: {
+        section: folderName.replace('/\$/', '')
+      }
+    }
+  })
+}
+
+export function getAllResourceIds() {
+  const folderNames = fs.readdirSync(resourcesDirectory)
+  return [].concat(folderNames.map(folderName => {
+    return getResourceIds(folderName)
+    
+  }))
 }
 
 export async function getBlogData(id: string) {
@@ -149,8 +184,8 @@ export async function getBlogData(id: string) {
   }
 }
 
-export async function getResourcesData(id: string) {
-  const fullPath = path.join(resourcesDirectory, `${id}.md`)
+export async function getResourcesData(id: string, section: string) {
+  const fullPath = path.join(`${resourcesDirectory}/${section}`, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section
