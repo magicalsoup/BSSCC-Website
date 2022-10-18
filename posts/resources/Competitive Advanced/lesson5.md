@@ -4,8 +4,6 @@ date: "2020-01-04"
 authors: "Daniel Chen, James Su, Austin Zeng"
 imgSrc: "https://wallpapercave.com/wp/wp4841223.jpg"
 blurb: "learn the shortest way to a girl's heart"
-priority: 1
-type: "resources"
 ---
 
 Linux is the best. Join the community so we can all admire anime girls i mean what i mean yes become egirls and use arch and idk what im saying bc i have no clue about linux at all. But yes I did outline 3 reasons: Anime girls, egirls, ..... girls.

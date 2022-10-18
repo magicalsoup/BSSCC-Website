@@ -17,8 +17,8 @@ export function getAllSortedPostsData() {
   const allPostsData = sortedResources.concat(sortedBlogs)
 
   return allPostsData.sort((a, b) => {
-    if(a.date > b.date) return 1
-    else return -1
+    if(a.date > b.date) return -1
+    else return 1
   })
 } 
 
@@ -46,15 +46,15 @@ export function getSortedBlogData() {
         imgSrc: string; 
         blurb: string;
         priority: number;
-        type: string;
-      })
+      }),
+      path: "blog",
     }
   })
   // Sort posts by date
   return allBlogData.sort((a, b) => {
     if (a.priority == b.priority) {
-      if(a.date > b.date) return 1
-      else return -1
+      if(a.date > b.date) return -1
+      else return 1
     } else {
       if(a.priority > b.priority) return -1 // if a has higher priority than b
       else return 1
@@ -82,14 +82,14 @@ export function getSortedResourcesData(section: string) {
         authors: string;
         imgSrc: string; 
         blurb: string;
-        type: string;
-      })
+      }),
+      path: `resources/${section}`
     }
   })
 
   return resourcesData.sort((a, b) => {
-    if(a.date > b.date) return 1
-    else return -1
+    if(a.date > b.date) return -1
+    else return 1
   })
 
 }
@@ -108,11 +108,10 @@ export function getAllResourcesData() {
   })
 
 
-  console.log(allResourcesData)
   // Sort posts by date
   return allResourcesData.sort((a, b) => {
-    if(a.date > b.date) return 1;
-    else return -1;
+    if(a.date > b.date) return -1
+    else return 1
   })
 }
 
@@ -132,7 +131,8 @@ export function getResourceIds(section: string) {
   return fileNames.map(fileName => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, '')
+        id: fileName.replace(/\.md$/, ''),
+        section: section
       }
     }
   })
@@ -151,10 +151,16 @@ export function getResourceSections() {
 
 export function getAllResourceIds() {
   const folderNames = fs.readdirSync(resourcesDirectory)
-  return [].concat(folderNames.map(folderName => {
-    return getResourceIds(folderName)
-    
-  }))
+  
+  let allResourceIds = []
+
+  folderNames.forEach(folderName => {
+    getResourceIds(folderName).forEach(file => {
+      allResourceIds.push(file)   
+    })
+  })
+
+  return allResourceIds;
 }
 
 export async function getBlogData(id: string) {

@@ -5,7 +5,6 @@ authors: "nextJs Dev"
 imgSrc: "https://wallpaperwoo.com/uploads/pictures/wallpapers/original/107580_707804102a2693e22615e0c5e3686e05.jpg"
 blurb: "hello1 hello1 hello1 hello1 hello1 hello1 hello1 hello1 hello1 hello1 hello1 "
 priority: 2
-type: "blog"
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.

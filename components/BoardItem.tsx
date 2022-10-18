@@ -1,14 +1,14 @@
 import Link from "next/link"
-export default function BoardItem ({id, title, authors, blurb, type}: {
+export default function BoardItem ({id, title, authors, blurb, path}: {
     id: string;
     title: string;
     authors: string;
     blurb: string;
-    type: string
+    path: string
 }) {
 
     return (
-        <Link href={`/${type}/${id}`}>
+        <Link href={`/${path}/${id}`}>
             <a className="py-6">
                 <div className="flex flex-col bg-white/20 p-6 w-64 h-48 rounded-xl">
                     <h1 className="truncate text-white text-lg font-bold font-raleway">{title}</h1>

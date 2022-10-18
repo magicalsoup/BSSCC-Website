@@ -11,7 +11,7 @@ export default function UpdateBoard({
         authors: string;
         imgSrc: string;
         blurb: string;
-        type: string;
+        path: string;
     }[];
 }) {
     
@@ -25,7 +25,7 @@ export default function UpdateBoard({
                         title={item.title}
                         authors={item.authors}
                         blurb={item.blurb}
-                        type={item.type}
+                        path={item.path}
                     />
                 )}
             </div>

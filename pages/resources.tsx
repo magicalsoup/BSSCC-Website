@@ -39,9 +39,11 @@ export default function Home ({
                             )}
                         </div>
                     </div>
-                    <Polaroid
-                        imgSrc="https://userstyles.org/style_screenshots/215513_after.png"
-                    />
+                    <div className="pt-16">
+                        <Polaroid
+                            imgSrc="https://userstyles.org/style_screenshots/215513_after.png"
+                        />
+                    </div>
                 </div>
             </main>
         </>

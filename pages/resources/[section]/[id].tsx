@@ -5,14 +5,17 @@ import Date from '../../../components/Date'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 export default function Post({
+  section,
   postData
 }: {
+  section: string;
   postData: {
     title: string
     date: string
     imgSrc: string
     authors: string
     contentHtml: string
+    blurb: string
   }
 }) {
   return (
@@ -49,6 +52,7 @@ export default function Post({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllResourceIds()
+  
   return {
     paths,
     fallback: false
@@ -56,6 +60,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  console.log('section')
+  console.log(params.section)
   const postData = await getResourcesData(params.id as string, params.section as string)
   return {
     props: {

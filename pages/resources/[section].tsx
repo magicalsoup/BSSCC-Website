@@ -1,8 +1,9 @@
 import Head from "next/head"
 import Navbar from "../../components/Navbar"
-import Banter from "../../components/Banter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getResourceSections, getSortedResourcesData } from "../../lib/posts";
+import ResourceItem from "../../components/ResourceItem";
+
 export default function Home ({
     section, sectionResourceData
 }: {
@@ -15,7 +16,7 @@ export default function Home ({
         imgSrc: string; 
         blurb: string;
         priority: number;
-        type: string;
+        path: string;
     }[];
 }) {
 
@@ -26,16 +27,17 @@ export default function Home ({
         </Head>
         <Navbar/>
         <main>
-            <div className="flex flex-col pb-32 bg-blue-gray-900">
-                <Banter 
-                    backgroundColor="bg-pink-500"
-                    title={section}
-                    description="This is for competitve topics that 
-                    attain to competitive programming and preparing for those contests."
-                />
-            </div>
-            <div className="flex bg-white flex-col">
-                
+            <div className="flex flex-col min-h-screen pb-32 bg-blue-gray-900 py-32">
+                <div className="flex flex-col px-24 space-y-12">
+                    <h1 className="text-5xl font-raleway font-bold white-to-pink-gradient">{section}</h1>
+                    {sectionResourceData.map((resource, index) => 
+                        <ResourceItem
+                            linkTo={`/resources/${section}/${resource.id}`}
+                            post={resource}
+                            key={index}
+                        />
+                    )}
+                </div>
             </div>
         </main>
     </>

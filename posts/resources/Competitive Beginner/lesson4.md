@@ -5,7 +5,6 @@ authors: "nextJs Dev"
 imgSrc: "https://wallpaperaccess.com/full/84248.png"
 blurb: "The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis. "
 priority: 1
-type: "resources"
 ---
 
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
