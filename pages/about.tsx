@@ -83,7 +83,7 @@ export default function Home() {
                             Frequently Asked Questions
                         </h1>
                         {FAQ_DATA.map((item, index) => 
-                            <AccordionItem item={item} index={index}/>
+                            <AccordionItem item={item} key={index}/>
                         )}
                     </div>
                 </div>

@@ -1,6 +1,6 @@
-export default function AccordionItem({item, index}) {
+export default function AccordionItem({item}) {
     return (
-        <div className="py-2" key={index}>
+        <div className="py-2">
             <div className="accordion flex text-2xl py-2 font-raleway">
                 <button className="pr-12 text-5xl mb-2">+</button>
                 <button className="inline-block align-text-bottom">{item.title}</button>
