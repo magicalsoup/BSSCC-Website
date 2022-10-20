@@ -1,4 +1,4 @@
-import Polaroid from "./Polaroid";
+import Polaroid from "../Shared/Polaroid";
 export default function PresidentCard({name, photoSrc, description, flexDirection} : {
     name: string;
     photoSrc: string;

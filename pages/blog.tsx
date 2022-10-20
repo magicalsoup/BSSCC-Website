@@ -1,24 +1,12 @@
 import Head from "next/head";
 import { getSortedBlogData } from "../lib/posts";
 import { GetStaticProps } from "next";
-import StarredPost from "../components/StarredPost";
-import NormalPost from "../components/NormalPost";
-import MailButton from "../components/MailButton";
-import Navbar from "../components/Navbar";
+import StarredPost from "../components/Blog/StarredPost";
+import NormalPost from "../components/Blog/NormalPost";
+import MailButton from "../components/Shared/MailButton";
+import Navbar from "../components/Shared/Navbar";
 
-export default function Home({
-  allBlogData,
-    }: {
-    allBlogData: {
-        date: string;
-        title: string;
-        id: string;
-        authors: string;
-        imgSrc: string;
-        blurb: string;
-        type: string;
-    }[];
-}) {
+export default function Home({allBlogData}) {
         
     const blogName = "{Closing Bracket}"
     // TODO need to swap null with a dummy in case there are no posts

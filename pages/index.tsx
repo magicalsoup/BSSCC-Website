@@ -1,9 +1,9 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import MailButton from "../components/MailButton";
-import Navbar from "../components/Navbar";
-import Polaroid from "../components/Polaroid";
-import UpdateBoard from "../components/UpdateBoard";
+import MailButton from "../components/Shared/MailButton";
+import Navbar from "../components/Shared/Navbar";
+import Polaroid from "../components/Shared/Polaroid";
+import UpdateBoard from "../components/Index/UpdateBoard";
 import { getAllSortedPostsData } from "../lib/posts";
 
 export default function Home({

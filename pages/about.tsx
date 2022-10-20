@@ -1,9 +1,9 @@
-import AccordionItem from "../components/AccordionItem";
-import Polaroid from "../components/Polaroid";
+import AccordionItem from "../components/About/AccordionItem";
+import Polaroid from "../components/Shared/Polaroid";
 import Head from "next/head"
-import { useState, useEffect } from "react";
-import PresidentCard from "../components/PresidentCard";
-import Navbar from "../components/Navbar";
+import { useState, useEffect, useMemo } from "react";
+import PresidentCard from "../components/About/PresidentCard";
+import Navbar from "../components/Shared/Navbar";
 
 export default function Home() {
 

@@ -1,32 +1,24 @@
 import Link from "next/link";
-import Date from "./Date";
-export default function StarredPost({post,} : {
-    post: {
-        date: string;
-        title: string;
-        id: string;
-        authors: string;
-        imgSrc: string;
-        blurb: string;
-    }
-}) {
+import Date from "../Shared/Date";
+export default function StarredPost({post}) {
+    const data = post.frontMatter
     return (
         <Link href={`/blog/${post.id}`}>
             <a className="flex flex-col bg-blue-gray-700 w-full"> 
-                <img src={post.imgSrc} className="max-h-96 object-cover"/>
+                <img src={data.imgSrc} className="max-h-96 object-cover"/>
                 <div className="bg-transparent p-4">
                     <div className="flex flex-row space-x-2 text-gray-300 text-xs">
                         <p className="font-dmsans">
-                            {post.authors}
+                            {data.authors}
                         </p>
                         <span>|</span>
-                        <Date dateString={post.date}/>
+                        <Date dateString={data.date}/>
                     </div>
                     <h1 className="font-bold text-4xl text-gray-200 py-4 font-raleway">
-                        {post.title}
+                        {data.title}
                     </h1>
                     <p className="text-gray-300 text-base font-dmsans">
-                        {post.blurb}
+                        {data.blurb}
                     </p>
                 </div>
             </a>

@@ -5,7 +5,7 @@ export default function Navbar() {
         <div className="flex fixed w-full items-center bg-blue-gray-900 pl-12 py-4 z-40 font-raleway">
             <Link href="/">
                 <a className="px-12">
-                    <img src="..\Blob (white).png" className="w-16"></img>
+                    <img src="/Blob (white).png" className="w-16" alt="nani"/>
                 </a>
             </Link>
             <Link href="/about">

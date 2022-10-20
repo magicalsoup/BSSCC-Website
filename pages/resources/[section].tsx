@@ -1,8 +1,8 @@
 import Head from "next/head"
-import Navbar from "../../components/Navbar"
+import Navbar from "../../components/Shared/Navbar"
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getResourceSections, getSortedResourcesData } from "../../lib/posts";
-import ResourceItem from "../../components/ResourceItem";
+import { getResourceSections, getSortedSectionData } from "../../lib/posts";
+import ResourceItem from "../../components/Resources/ResourceItem";
 
 export default function Home ({
     section, sectionResourceData
@@ -53,7 +53,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const sectionResourceData = getSortedResourcesData(params.section as string)
+    const sectionResourceData = getSortedSectionData(params.section as string)
     
     const section = params.section
 

@@ -1,9 +1,9 @@
 import Head from "next/head"
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Shared/Navbar"
 import Link from "next/link"
 import { GetStaticProps } from "next"
 import { getResourceSections} from "../lib/posts"
-import Polaroid from "../components/Polaroid"
+import Polaroid from "../components/Shared/Polaroid"
 export default function Home ({
     sectionFolders
 } : {

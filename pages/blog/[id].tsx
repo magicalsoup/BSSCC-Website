@@ -1,47 +1,40 @@
 import { getAllBlogIds, getBlogData } from '../../lib/posts'
 import Link from 'next/link'
 import Head from 'next/head'
-import Date from '../../components/Date'
+import Date from '../../components/Shared/Date'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import Navbar from '../../components/Shared/Navbar'
+import { MDXRemote } from "next-mdx-remote";
 
-export default function Post({
-  postData
-}: {
-  postData: {
-    title: string
-    date: string
-    imgSrc: string
-    authors: string
-    contentHtml: string
-  }
-}) {
+export default function Post({frontMatter, source}) {
+
   return (
     <>
       <Head>
-        <title>{postData.title}</title>
+        <title>{frontMatter.title}</title>
       </Head>
+      <Navbar/>
       <main>
-        <div className="flex flex-col items-center py-20 px-24">
+        <div className="flex flex-col bg-orange-50 items-center py-32 px-24">
           <div className="flex flex-col space-y-6 text-center py-8">
-            <h1 className="font-bold text-3xl">{postData.title}</h1>
+            <h1 className="font-bold text-3xl">{frontMatter.title}</h1>
             <div className="flex justify-center text-sm">
-              <p>{postData.authors}</p>
+              <p>{frontMatter.authors}</p>
             </div>
             <div className="text-sm">
-              <Date dateString={postData.date} />
+              <Date dateString={frontMatter.date} />
             </div>
           </div>
 
           <div className="py-8">
-              <img className="" src={postData.imgSrc}/>
+              <img className="" src={frontMatter.imgSrc}/>
           </div>
-          <div className="py-12 prose prose-xl">
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <article className="py-12 prose prose-blog prose-xl">
+            <MDXRemote {...source} />
             <Link href="/blog">
               <a className="text-sky-600 font-bold">← Back to Blogs</a>
             </Link>
-          </div>
-
+          </article>
         </div>
       </main>
     </>
@@ -57,10 +50,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getBlogData(params.id as string)
+  const {frontMatter, mdxSource} = await getBlogData(params.id as string)
   return {
     props: {
-      postData
+      frontMatter,
+      source: mdxSource
     }
   }
 }

@@ -6,6 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      typography: ({theme}) => ({
+        blog: {
+          css: {
+            '--tw-prose-bullets': theme('colors.gray[900]'),
+          }
+        }
+      }),
       colors: {
         "blue-gray-700": "#334155",
         "blue-gray-900": "#0F172A",
