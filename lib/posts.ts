@@ -43,8 +43,6 @@ export function getAllSortedPostsData() {
   // join the both postsData into one array 
   const allPostsData = sortedResources.concat(sortedBlogs)
 
-  console.table(allPostsData)
-
   return allPostsData.sort((a, b) => dateComparator(a, b))
 } 
 export function getSortedBlogData() {

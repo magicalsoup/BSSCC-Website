@@ -1,35 +1,14 @@
 import AccordionItem from "../components/About/AccordionItem";
 import Polaroid from "../components/Shared/Polaroid";
 import Head from "next/head"
-import { useState, useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import PresidentCard from "../components/About/PresidentCard";
 import Navbar from "../components/Shared/Navbar";
+import { FAQ_DATA } from "../data/FAQData";
+import { EXECUTIVE_DATA } from "../data/ExecutiveData";
+import ExecBoard from "../components/About/ExecutiveBoard";
 
 export default function Home() {
-
-    // dummy data
-    let questions = [
-
-        {
-            title: "Why should I join",
-            content: "because you are pog",
-        },
-        {
-            title: "When are club meetings",
-            content: "wednesdays and fridays",
-        },
-        {
-            title: "Why should I join the club if I'm big brain",
-            content: "because your brain is not big enough",
-        },
-        {
-            title: "Why should I join",
-            content: "because why not, also i already answered this question",
-        },
-    ];
-
-    const [accordion, setAccordion] = useState(false);
-    // TODO make this more efficient by only updating when according is clicked, not when anything is clicked on the page
 
     useEffect(() => { 
         let acc = document.getElementsByClassName("accordion");
@@ -96,14 +75,14 @@ export default function Home() {
                     </div>
 
                     <div className=""> {/* TODO add 'image carousel'for exec members*/}
-                        
+                        <ExecBoard ExecData={EXECUTIVE_DATA}/>
                     </div>
 
                     <div className="flex flex-col">
                         <h1 className="text-5xl py-8 font-bold white-to-blue-gradient font-raleway">
                             Frequently Asked Questions
                         </h1>
-                        {questions.map((item, index) => 
+                        {FAQ_DATA.map((item, index) => 
                             <AccordionItem item={item} index={index}/>
                         )}
                     </div>

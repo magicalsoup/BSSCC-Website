@@ -4,21 +4,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { getResourceSections, getSortedSectionData } from "../../lib/posts";
 import ResourceItem from "../../components/Resources/ResourceItem";
 
-export default function Home ({
-    section, sectionResourceData
-}: {
-    section: string;
-    sectionResourceData: {
-        id: string;
-        date: string; 
-        title: string; 
-        authors: string;
-        imgSrc: string; 
-        blurb: string;
-        priority: number;
-        path: string;
-    }[];
-}) {
+export default function Home ({section, sectionResourceData}) {
 
     return (
         <>
@@ -54,7 +40,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const sectionResourceData = getSortedSectionData(params.section as string)
-    
     const section = params.section
 
     return {

@@ -5,6 +5,8 @@ import Date from '../../components/Shared/Date'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Navbar from '../../components/Shared/Navbar'
 import { MDXRemote } from "next-mdx-remote";
+import PostAuthors from '../../components/Shared/PostAuthors'
+import PostBanter from '../../components/Shared/PostBanter'
 
 export default function Post({frontMatter, source}) {
 
@@ -16,17 +18,14 @@ export default function Post({frontMatter, source}) {
       <Navbar/>
       <main>
         <div className="flex flex-col bg-orange-50 items-center py-32 px-24">
-          <div className="flex flex-col space-y-6 text-center py-8">
-            <h1 className="font-bold text-3xl">{frontMatter.title}</h1>
-            <div className="flex justify-center text-sm">
-              <p>{frontMatter.authors}</p>
-            </div>
-            <div className="text-sm">
-              <Date dateString={frontMatter.date} />
-            </div>
-          </div>
 
-          <div className="py-8">
+          <PostBanter 
+            authors={frontMatter.authors}
+            title={frontMatter.title}
+            date={frontMatter.date}
+          />
+
+          <div className="py-4">
               <img className="" src={frontMatter.imgSrc}/>
           </div>
           <article className="py-12 prose prose-blog prose-xl">

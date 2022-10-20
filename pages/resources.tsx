@@ -23,7 +23,7 @@ export default function Home ({
                 <div className="flex justify-between p-32 h-screen bg-blue-gray-900">
                     <div className="">
                         <div className="flex flex-col py-8">
-                            <h1 className="font-raleway text-5xl white-to-pink-gradient">Resources</h1>
+                            <h1 className="font-raleway font-bold text-5xl white-to-pink-gradient">Resources</h1>
                             <p className="font-dmsans text-white text-lg pt-4">
                                 Complementary resources for our meeetings.
                             </p>
