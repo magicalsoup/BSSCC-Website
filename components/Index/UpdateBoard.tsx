@@ -1,13 +1,9 @@
-import { GetStaticProps } from "next";
-import { getAllSortedPostsData } from "../../lib/posts";
 import BoardItem from "./BoardItem"
 export default function UpdateBoard({allPostsData,}) {
-    
-     
 
     return (
         <div className="bg-white/10 p-12 rounded-xl">
-            <div className="flex flex-wrap justify-around content-between">
+            <div className="grid grid-cols-3">
                 {allPostsData.map((post, index) => 
                     <BoardItem 
                         key={index}

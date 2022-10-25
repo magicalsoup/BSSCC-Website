@@ -7,6 +7,7 @@ import Navbar from "../components/Shared/Navbar";
 import { FAQ_DATA } from "../data/FAQData";
 import { EXECUTIVE_DATA } from "../data/ExecutiveData";
 import ExecBoard from "../components/About/ExecutiveBoard";
+import PolaroidLayer from "../components/Shared/PolaroidLayer";
 
 export default function Home() {
 
@@ -33,9 +34,9 @@ export default function Home() {
             <Navbar/>
             <main>
                 <div className="flex flex-col bg-blue-gray-900 p-32">
-                    <div className="flex justify-between py-12">
+                    <div className="flex gap-x-24 py-24">
                         <div className="flex flex-col max-w-lg">
-                            <h1 className="py-4 text-5xl white-to-pink-gradient font-raleway">
+                            <h1 className="py-4 text-5xl white-to-pink-gradient font-raleway font-bold">
                                 Our Mission
                             </h1>
                             <p className="py-4 text-lg text-white font-dmsans">
@@ -49,13 +50,14 @@ export default function Home() {
                                 - BSSCC '22 Team
                             </h1>
                         </div>
-                        <div className="pt-12 max-w-lg">
-                            <Polaroid imgSrc={"https://images8.alphacoders.com/749/749455.png"} />
+                        
+                        <div className="max-w-lg">
+                            <PolaroidLayer imgSrc={"https://images8.alphacoders.com/749/749455.png"} />
                         </div>
                     </div>
 
-                    <div className="flex flex-col space-y-16 py-32">
-                        <h1 className="w-full text-center text-5xl white-to-pink-gradient font-raleway">
+                    <div className="flex flex-col gap-y-16 py-12">
+                        <h1 className="w-full text-center text-5xl white-to-pink-gradient font-raleway font-bold">
                             Meet Our Team
                         </h1>
 
@@ -73,11 +75,7 @@ export default function Home() {
                             flexDirection={"flex-row-reverse"}
                         />
                     </div>
-
-                    <div className=""> {/* TODO add 'image carousel'for exec members*/}
-                        <ExecBoard ExecData={EXECUTIVE_DATA}/>
-                    </div>
-
+                    <ExecBoard ExecData={EXECUTIVE_DATA}/>
                     <div className="flex flex-col">
                         <h1 className="text-5xl py-8 font-bold white-to-blue-gradient font-raleway">
                             Frequently Asked Questions

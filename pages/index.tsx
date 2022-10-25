@@ -5,6 +5,7 @@ import Navbar from "../components/Shared/Navbar";
 import Polaroid from "../components/Shared/Polaroid";
 import UpdateBoard from "../components/Index/UpdateBoard";
 import { getAllSortedPostsData } from "../lib/posts";
+import PolaroidLayer from "../components/Shared/PolaroidLayer";
 
 export default function Home({
   allPostsData,
@@ -29,7 +30,7 @@ export default function Home({
       <main>
         <div className="flex flex-col space-y-28 bg-blue-gray-900 p-32">
 
-          <div className="flex justify-between">
+          <div className="flex">
             <div className="flex flex-col">
               <h1 className="leading-relaxed text-5xl font-bold white-to-blue-gradient py-4 font-raleway">
                 Bayview's <br></br>
@@ -49,10 +50,8 @@ export default function Home({
                 />
               </div>
             </div>
-  
-            <Polaroid
-              imgSrc="https://img.freepik.com/free-vector/linear-vintage-vaporwave-background_52683-58477.jpg"
-              name=""
+            <PolaroidLayer
+              imgSrc="https://img.freepik.com/free-vector/linear-vintage-vaporwave-background_52683-58477.jpg"  
             />
           </div>
 

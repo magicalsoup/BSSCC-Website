@@ -4,6 +4,7 @@ import Link from "next/link"
 import { GetStaticProps } from "next"
 import { getResourceSections} from "../lib/posts"
 import Polaroid from "../components/Shared/Polaroid"
+import PolaroidLayer from "../components/Shared/PolaroidLayer"
 export default function Home ({
     sectionFolders
 } : {
@@ -20,8 +21,8 @@ export default function Home ({
             </Head>
             <Navbar/>
             <main>
-                <div className="flex justify-between p-32 h-screen bg-blue-gray-900">
-                    <div className="">
+                <div className="flex p-32 h-screen bg-blue-gray-900">
+                    <div className="w-1/2">
                         <div className="flex flex-col py-8">
                             <h1 className="font-raleway font-bold text-5xl white-to-pink-gradient">Resources</h1>
                             <p className="font-dmsans text-white text-lg pt-4">
@@ -39,11 +40,9 @@ export default function Home ({
                             )}
                         </div>
                     </div>
-                    <div className="pt-16">
-                        <Polaroid
-                            imgSrc="https://userstyles.org/style_screenshots/215513_after.png"
-                        />
-                    </div>
+                    <PolaroidLayer
+                        imgSrc="https://userstyles.org/style_screenshots/215513_after.png"
+                    />
                 </div>
             </main>
         </>
