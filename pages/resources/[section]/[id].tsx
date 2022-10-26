@@ -27,7 +27,7 @@ export default function Post({ section, frontMatter, source }) {
           <div className="py-4">
             <iframe
               src={frontMatter.slidesSrc}
-              className="w-[480px] h-[299px] lg:w-[960px] lg:h-[569px] 2xl:w-[1440px] 2xl:w-[839px]"
+              className="w-[480px] h-[300px] lg:w-[960px] lg:h-[570px] 2xl:w-[1440px] 2xl:w-[840px]"
               allowFullScreen={true}
             />
           </div>

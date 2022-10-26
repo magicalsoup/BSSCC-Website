@@ -1,11 +1,9 @@
 import { getAllBlogIds, getBlogData } from '../../lib/posts'
 import Link from 'next/link'
 import Head from 'next/head'
-import Date from '../../components/Shared/Date'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Navbar from '../../components/Shared/Navbar'
 import { MDXRemote } from "next-mdx-remote";
-import PostAuthors from '../../components/Shared/PostAuthors'
 import PostBanter from '../../components/Shared/PostBanter'
 
 export default function Post({frontMatter, source}) {
@@ -18,13 +16,11 @@ export default function Post({frontMatter, source}) {
       <Navbar/>
       <main>
         <div className="flex flex-col bg-orange-50 items-center py-32 px-24">
-
           <PostBanter 
             authors={frontMatter.authors}
             title={frontMatter.title}
             date={frontMatter.date}
           />
-
           <div className="py-4">
               <img className="" src={frontMatter.imgSrc}/>
           </div>

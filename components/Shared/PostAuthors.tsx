@@ -30,7 +30,7 @@ export default function PostAuthors({authors}) {
     }
 
     return (
-        <div className="flex flex-col text-sm py-4">
+        <div className="flex flex-col w-fit text-sm py-4">
             {authorData.map((author, index) => 
                 <div className="flex w-full py-1.5" key={index}>
                     <div className="pr-4"> 

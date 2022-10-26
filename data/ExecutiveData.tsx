@@ -1,3 +1,16 @@
+/*
+
+TODO: Add executives data:
+Kevin Tang - General
+Aron Ravikumar - General
+Owen Guo - General
+Jaden Zhang - Competitive
+Alex Xu - Competitive
+Karen Lin - PR officer
+Mr Smintinch - Supervisor
+
+*/
+
 export const EXECUTIVE_DATA = [
     {
         name: "Austin Zeng",

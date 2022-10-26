@@ -6,7 +6,7 @@ export default function PostBanter({title, authors, date} : {
     date: string
 }) {
     return (
-        <div className="flex flex-col text-center py-8 w-96">
+        <div className="flex flex-col items-center text-center py-8 w-96 md:w-[640px]">
             <h1 className="font-bold text-3xl">{title}</h1>
             <PostAuthors authors={authors}/>
             <div className="text-md text-gray-600 font-medium font-dmsans">

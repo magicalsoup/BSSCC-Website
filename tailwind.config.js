@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'tablet': '640px',
+        'laptop': '1024px',
+        'desktop': '1280px',
+        'ultrawide': '1536px'
+      },
       typography: ({theme}) => ({
         blog: {
           css: {
