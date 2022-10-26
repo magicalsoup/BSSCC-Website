@@ -40,7 +40,7 @@ export default function Home({
                   ))}
                 </div>
               </div>
-              <PolaroidLayer imgSrc="https://userstyles.org/style_screenshots/215513_after.png" />
+              <PolaroidLayer imgSrc="/images/polaroids/resources.jpg" />
             </div>
           </div>
         </div>

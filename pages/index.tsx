@@ -50,7 +50,7 @@ export default function Home({
                 </div>
               </div>
               <PolaroidLayer
-                imgSrc="https://img.freepik.com/free-vector/linear-vintage-vaporwave-background_52683-58477.jpg"
+                imgSrc="/images/polaroids/index.webp"
               />
             </div>
 

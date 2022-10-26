@@ -53,7 +53,7 @@ export default function Home() {
                 </h1>
               </div>
               <PolaroidLayer
-                imgSrc={"https://images8.alphacoders.com/749/749455.png"}
+                imgSrc="/images/polaroids/about.png"
               />
             </div>
 
@@ -63,19 +63,17 @@ export default function Home() {
               </h1>
 
               <PresidentCard
-                photoSrc={
-                  "https://qph.cf2.quoracdn.net/main-qimg-603a70b456b433931e2fbd534710ca95-lq"
-                }
-                name={"Austin Zeng"}
-                description={"life is nice."}
-                flexDirection={""}
+                photoSrc="/images/executives/Austin_Zeng.jpg"
+                name="Austin Zeng"
+                description="life is nice."
+                flexDirection=""
               />
 
               <PresidentCard
-                photoSrc={"https://wallpapercave.com/wp/wp7151694.png"}
-                name={"Derrick Ha"}
-                description={"life is very nice."}
-                flexDirection={"flex-row-reverse"}
+                photoSrc="/images/executives/Derrick_Ha.webp"
+                name="Derrick Ha"
+                description="life is very nice."
+                flexDirection="flex-row-reverse"
               />
             </div>
             <ExecBoard ExecData={EXECUTIVE_DATA} />
