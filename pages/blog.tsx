@@ -6,57 +6,77 @@ import NormalPost from "../components/Blog/NormalPost";
 import MailButton from "../components/Shared/MailButton";
 import Navbar from "../components/Shared/Navbar";
 
-export default function Home({allBlogData}) {
-        
-    const blogName = "{Closing Bracket}"
-    // TODO need to swap null with a dummy in case there are no posts
-    const starredPost = allBlogData? allBlogData[0] : null; 
-    return (
-        <>
-        <Head>
-            <title>{blogName}</title>
-        </Head>
-        <Navbar/>
-        <main>
-            <div className="flex flex-col bg-blue-gray-900 py-20">
-                <div className="bg-white backdrop-blur-2xl py-20"> {/*TODO add background img*/}
-                    <div className="flex flex-col bg-black/70 w-full py-6 px-32">
-                        <h1 className="text-5xl font-bold blue-to-white-gradient py-2 font-raleway">
-                            {blogName}
-                        </h1>
-                        <p className="text-xl text-pink-600 font-dmsans">Read, Learn, Implement.</p>
-                        <p className="text-xl py-4 text-white font-dmsans">
-                            Discover and learn new tech from our talented executives and members.
-                        </p>
-                        <MailButton
-                            text="Join our Mailing List"
-                            tailwindCSS="bg-pink-500 text-white p-2"
-                            linkTo="http://google.com"
-                        />
-                    </div>
-                </div>
-                <div className="flex flex-col space-y-12 items-center px-32 py-20">
-                    <StarredPost post={starredPost}/>
-                    <div className="flex w-full space-x-6">
-                        {allBlogData.slice(1).map((item, index) => 
-                            <NormalPost post={item} key={index}/>
-                        )}
-                    </div>
-                </div>
+export default function Home({ allBlogData }) {
+  const blogName = "{Closing Bracket}";
+  // TODO need to swap null with a dummy in case there are no posts
+  const starredPost = allBlogData ? allBlogData[0] : null;
+  return (
+    <>
+      <Head>
+        <title>{blogName}</title>
+      </Head>
+      <Navbar />
+      <main>
+        <div className="flex flex-col min-h-screen bg-blue-gray-900 py-20">
+          <div className="flex bg-white backdrop-blur-2xl py-20">
+            {/*TODO add background img*/}
+            <div className="flex flex-col 2xl:items-center bg-black/70 w-full py-6 px-32">
+              <div className="2xl:w-[1280px]">
+                <h1 className="text-5xl font-bold blue-to-white-gradient py-2 font-raleway">
+                  {blogName}
+                </h1>
+                <p className="text-xl text-pink-600 font-dmsans">
+                  Read, Learn, Implement.
+                </p>
+                <p className="text-xl py-4 text-white font-dmsans">
+                  Discover and learn new tech from our talented executives and
+                  members.
+                </p>
+                <MailButton
+                  text="Join our Mailing List"
+                  tailwindCSS="bg-pink-500 text-white p-2"
+                  linkTo="http://google.com"
+                />
+              </div>
             </div>
-        </main>
-        <style jsx>{`
-            .blue-to-white-gradient{
-                background: linear-gradient(89.95deg, rgba(226, 232, 240, 0.9) -12.79%, rgba(255, 255, 255, 0) 180.54%), linear-gradient(270deg, rgba(125, 211, 252, 0.9) -12.13%, rgba(255, 255, 255, 0) 178.47%), linear-gradient(270deg, rgba(165, 243, 252, 0.9) 111.93%, rgba(255, 255, 255, 0) 175.65%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                text-fill-color: transparent;
-            }
+          </div>
+          <div className="flex flex-col space-y-12 items-center px-32 py-20">
+            <StarredPost post={starredPost} />
+            <div className="flex w-full 2xl:w-[1280px] space-x-6">
+              {allBlogData.slice(1).map((item, index) => (
+                <NormalPost post={item} key={index} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </main>
+      <style jsx>
+        {`
+          .blue-to-white-gradient {
+            background: linear-gradient(
+                89.95deg,
+                rgba(226, 232, 240, 0.9) -12.79%,
+                rgba(255, 255, 255, 0) 180.54%
+              ),
+              linear-gradient(
+                270deg,
+                rgba(125, 211, 252, 0.9) -12.13%,
+                rgba(255, 255, 255, 0) 178.47%
+              ),
+              linear-gradient(
+                270deg,
+                rgba(165, 243, 252, 0.9) 111.93%,
+                rgba(255, 255, 255, 0) 175.65%
+              );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
         `}
-        </style>
-        </>
-    );
+      </style>
+    </>
+  );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -64,7 +84,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-        allBlogData,
+      allBlogData,
     },
   };
 };

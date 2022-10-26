@@ -3,7 +3,7 @@ import Polaroid from "./Polaroid"
 
 export default function PolaroidLayer(props) {
     return (
-        <div className="relative w-1/2">
+        <div className="relative w-1/2"> {/*TODO make width responsive*/}
             <div className="absolute right-0 origin-center -rotate-12">
                 <Polaroid imgSrc={props.imgSrc}/>
             </div>

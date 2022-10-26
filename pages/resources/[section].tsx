@@ -13,16 +13,18 @@ export default function Home ({section, sectionResourceData}) {
         </Head>
         <Navbar/>
         <main>
-            <div className="flex flex-col min-h-screen pb-32 bg-blue-gray-900 py-32">
-                <div className="flex flex-col px-24 space-y-12">
-                    <h1 className="text-5xl font-raleway font-bold white-to-pink-gradient">{section}</h1>
-                    {sectionResourceData.map((resource, index) => 
-                        <ResourceItem
-                            linkTo={`/resources/${section}/${resource.id}`}
-                            post={resource}
-                            key={index}
-                        />
-                    )}
+            <div className="flex flex-col 2xl:items-center min-h-screen pb-32 bg-blue-gray-900 py-32">
+                <div className="2xl:w-[1280px]">
+                    <div className="flex flex-col px-24 space-y-12">
+                        <h1 className="text-5xl font-raleway font-bold white-to-pink-gradient">{section}</h1>
+                        {sectionResourceData.map((resource, index) => 
+                            <ResourceItem
+                                linkTo={`/resources/${section}/${resource.id}`}
+                                post={resource}
+                                key={index}
+                            />
+                        )}
+                    </div>
                 </div>
             </div>
         </main>
