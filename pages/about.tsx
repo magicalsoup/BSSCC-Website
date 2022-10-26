@@ -31,14 +31,14 @@ export default function Home() {
       </Head>
       <Navbar />
       <main>
-        <div className="flex flex-col 2xl:items-center bg-blue-gray-900 p-32">
+        <div className="flex flex-col 2xl:items-center bg-blue-gray-900 px-4 sm:px-8 lg:px-16 xl:px-32 py-32">
           <div className="2xl:w-[1280px]">
-            <div className="flex py-24">
-              <div className="flex flex-col max-w-lg">
-                <h1 className="py-4 text-5xl white-to-pink-gradient font-raleway font-bold">
+            <div className="flex justify-center md:justify-start py-8 md:pb-24">
+              <div className="flex flex-col w-96 md:w-fit md:max-w-lg">
+                <h1 className="sm:py-4 text-3xl md:text-5xl white-to-pink-gradient font-raleway font-bold">
                   Our Mission
                 </h1>
-                <p className="py-4 text-lg text-white font-dmsans">
+                <p className="py-4 text-md lg:text-lg text-white font-dmsans w-96 lg:w-fit">
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -54,11 +54,12 @@ export default function Home() {
               </div>
               <PolaroidLayer
                 imgSrc="/images/polaroids/about.png"
+                responseWidth={768}
               />
             </div>
 
-            <div className="flex flex-col gap-y-16 py-12">
-              <h1 className="text-center text-5xl white-to-pink-gradient font-raleway font-bold">
+            <div className="flex flex-col gap-y-16 sm:py-12">
+              <h1 className="text-center text-3xl md:text-5xl white-to-pink-gradient font-raleway font-bold">
                 Meet Our Team
               </h1>
 
@@ -78,7 +79,7 @@ export default function Home() {
             </div>
             <ExecBoard ExecData={EXECUTIVE_DATA} />
             <div className="flex flex-col">
-              <h1 className="text-5xl py-8 font-bold white-to-blue-gradient font-raleway">
+              <h1 className="text-3xl md:text-5xl py-8 font-bold white-to-blue-gradient font-raleway">
                 Frequently Asked Questions
               </h1>
               {FAQ_DATA.map((item, index) => (

@@ -14,10 +14,10 @@ export default function StarredPost({post}) {
                         <span>|</span>
                         <Date dateString={data.date}/>
                     </div>
-                    <h1 className="font-bold text-4xl text-gray-200 py-4 font-raleway">
+                    <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-200 py-2 sm:py-4 font-raleway">
                         {data.title}
                     </h1>
-                    <p className="text-gray-300 text-base font-dmsans">
+                    <p className="text-gray-300 text-sm sm:text-base font-dmsans">
                         {data.blurb}
                     </p>
                 </div>

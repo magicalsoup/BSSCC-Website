@@ -1,11 +1,11 @@
 export default function AccordionItem({item}) {
     return (
         <div className="py-2">
-            <div className="flex accordion text-2xl py-2 font-raleway w-fit">
+            <div className="flex accordion  py-2 font-raleway w-fit">
                 <button className="pr-12 text-5xl mb-2">+</button>
-                <button className="w-fit align-text-bottom">{item.title}</button>
+                <button className="w-fit sm:text-2xl">{item.title}</button>
             </div>
-            <p className="panel pl-20 text-gray-300 font-dmsans"> 
+            <p className="sm:text-lg panel pl-20 text-gray-300 font-dmsans"> 
                 {item.content}
             </p>
             <style jsx>{`
