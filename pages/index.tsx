@@ -27,11 +27,11 @@ export default function Home({
       </Head>
       <Navbar />
       <main>
-        <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 p-32">
-          <div className="2xl:w-[1280px] space-y-24">
-            <div className="flex">
-              <div className="flex flex-col">
-                <h1 className="leading-relaxed text-5xl font-bold white-to-blue-gradient py-4 font-raleway">
+        <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 px-6 sm:px-12 xl:px-32 py-32">
+          <div className="2xl:w-[1280px] space-y-16 md:space-y-24">
+            <div className="flex gap-x-2 lg:pb-24">
+              <div className="flex flex-col sm:w-[640px]">
+                <h1 className="leading-relaxed text-3xl md:text-4xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient py-4 font-raleway">
                   Bayview's <br></br>
                   student-organized <br></br>
                   computing community
@@ -51,18 +51,19 @@ export default function Home({
               </div>
               <PolaroidLayer
                 imgSrc="/images/polaroids/index.webp"
+                responseWidth={768}
               />
             </div>
 
 
             <div className="flex flex-col">
-              <h1 className="text-white text-3xl font-bold py-12 font-raleway">Recent Updates</h1>
+              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold py-8 sm:pb-12 font-raleway">Recent Updates</h1>
               <UpdateBoard allPostsData={allPostsData} />
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white text-3xl font-bold font-raleway">Join our Mailing List</h1>
-              <p className="text-white py-8 text-lg font-dmsans">
+              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">Join our Mailing List</h1>
+              <p className="text-white py-4 sm:py-8 text-md sm:text-lg font-dmsans">
                 Join our mailing list to recieve email notifications about important news and upcoming events!
               </p>
               <MailButton
@@ -73,8 +74,8 @@ export default function Home({
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white text-3xl font-bold font-raleway">Connect With Us!</h1>
-              <p className="text-white py-8 text-lg font-dmsans">Drop by any of our social media outlets to learn more about us,
+              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">Connect With Us!</h1>
+              <p className="text-white py-4 sm:py-8 text-md sm:text-lg font-dmsans">Drop by any of our social media outlets to learn more about us,
                 keep up-to-date with our upcoming events or to chat with our members!
               </p>
             </div>
