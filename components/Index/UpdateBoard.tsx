@@ -42,7 +42,7 @@ export default function UpdateBoard({ allPostsData }) {
         {allPostsData.slice(0, total_cards).map((post, index) => (
           <BoardItem
             key={index}
-            id={post.frontMatter.id}
+            id={post.id}
             title={post.frontMatter.title}
             authors={post.frontMatter.authors}
             blurb={post.frontMatter.blurb}

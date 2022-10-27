@@ -6,12 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        'tablet': '640px',
-        'laptop': '1024px',
-        'desktop': '1280px',
-        'ultrawide': '1536px'
-      },
       typography: ({theme}) => ({
         blog: {
           css: {
@@ -20,6 +14,8 @@ module.exports = {
         }
       }),
       colors: {
+        "blue-gray-500": "#64748B",
+        "blue-gray-600": "#475569",
         "blue-gray-700": "#334155",
         "blue-gray-900": "#0F172A",
       },

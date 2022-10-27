@@ -6,7 +6,6 @@ export default function BoardItem ({id, title, authors, blurb, path}: {
     blurb: string;
     path: string
 }) {
-
     return (
         <Link href={`/${path}/${id}`}>
             <a className="flex justify-center py-6">

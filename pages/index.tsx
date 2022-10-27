@@ -27,11 +27,11 @@ export default function Home({
       </Head>
       <Navbar />
       <main>
-        <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 px-6 sm:px-12 xl:px-32 py-32">
+        <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 px-6 sm:px-12 xl:px-32 py-24 sm:py-36">
           <div className="2xl:w-[1280px] space-y-16 md:space-y-24">
             <div className="flex gap-x-2 lg:pb-24">
-              <div className="flex flex-col sm:w-[640px]">
-                <h1 className="leading-relaxed text-3xl md:text-4xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient py-4 font-raleway">
+              <div className="flex flex-col w-full sm:w-[640px]">
+                <h1 className="text-4xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient py-4 font-raleway">
                   Bayview's <br></br>
                   student-organized <br></br>
                   computing community
