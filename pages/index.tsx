@@ -40,11 +40,12 @@ export default function Home({
                   <MailButton
                     text="Join Our Meetings"
                     linkTo="http://google.com"
-                    tailwindCSS="bg-pink-500 text-white p-2"
+                    tailwindCSS="bg-pink-600 text-white p-2 hover:text-pink-600 hover:bg-white"
                   />
                   <MailButton
                     text="Signup For Our Mailing List"
-                    tailwindCSS="bg-transparent text-white p-2 outline outline-1 outline-white outline-offset-[-1px]"
+                    tailwindCSS="bg-transparent text-white p-2 hover:bg-sky-50 hover:text-blue-gray-900
+                    outline outline-1 outline-white outline-offset-[-1px]"
                     linkTo="http://google.com"
                   />
                 </div>
@@ -72,7 +73,7 @@ export default function Home({
               </p>
               <MailButton
                 text="Subscribe"
-                tailwindCSS="bg-sky-50 text-blue-gray-900 px-4 py-2"
+                tailwindCSS="bg-sky-50 text-blue-gray-900 px-4 py-2 hover:bg-blue-gray-500 hover:text-sky-50"
                 linkTo="http://google.com"
               />
             </div>
@@ -87,11 +88,17 @@ export default function Home({
                 members!
               </p>
               <div className="flex gap-x-8">
-                <a href="https://discord.gg/3cuc9zzS4a" className="bg-sky-50 p-2 rounded-md">
-                  <FaDiscord className="text-5xl text-blue-gray-900"/>
+                <a
+                  href="https://discord.gg/3cuc9zzS4a"
+                  className="transition-all duration-200 bg-sky-50 p-2 rounded-md hover:bg-blue-gray-500 text-blue-gray-900 hover:text-sky-50 hover:scale-105"
+                >
+                  <FaDiscord className="text-5xl " />
                 </a>
-                <a href="https://www.instagram.com/bayviewcomputerclub/" className="bg-sky-50 p-2 rounded-md">
-                  <FaInstagram className="text-5xl text-blue-gray-900"/>
+                <a
+                  href="https://www.instagram.com/bayviewcomputerclub/"
+                  className="transition-all duration-200 bg-sky-50 p-2 rounded-md hover:bg-blue-gray-500 text-blue-gray-900 hover:text-sky-50 hover:scale-105"
+                >
+                  <FaInstagram className="text-5xl" />
                 </a>
               </div>
             </div>

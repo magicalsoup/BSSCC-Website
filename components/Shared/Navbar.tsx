@@ -32,19 +32,19 @@ export default function Navbar() {
   const [navbarBackground, setNavbarBackground] = useState("bg-blue-gray-900");
   useEffect(() => {
     function setBackground() {
-        if (typeof window !== "undefined") {
-            console.log(window.scrollY);
-            if (window.scrollY > 100) {
-              setNavbarBackground("bg-blue-gray-600");
-            } else {
-              setNavbarBackground("bg-blue-gray-900");
-            }
+      if (typeof window !== "undefined") {
+        console.log(window.scrollY);
+        if (window.scrollY > 100) {
+          setNavbarBackground("bg-blue-gray-600");
+        } else {
+          setNavbarBackground("bg-blue-gray-900");
         }
+      }
     }
-    
-    window.addEventListener('scroll', setBackground)
 
-    return () => window.removeEventListener('scroll', setBackground)
+    window.addEventListener("scroll", setBackground);
+
+    return () => window.removeEventListener("scroll", setBackground);
   }, []);
 
   if (match) {
@@ -53,7 +53,7 @@ export default function Navbar() {
         <div
           className={`flex fixed w-full justify-center ${navbarBackground} py-4 z-40 font-raleway"`}
         >
-          <div className="flex flex-between w-full px-4">
+          <div className="flex justify-between w-full px-4">
             <div className="">
               <Link href="/">
                 <a>
@@ -61,14 +61,16 @@ export default function Navbar() {
                 </a>
               </Link>
             </div>
-            <div className=""></div>
+            <div className="">{/*TODO implement hamburger menu*/}</div>
           </div>
         </div>
       </div>
     );
   } else {
     return (
-      <div className={`flex fixed w-full justify-center ${navbarBackground} py-2 z-40 font-raleway`}>
+      <div
+        className={`flex fixed w-full justify-center ${navbarBackground} pt-3 pb-2 z-40 font-raleway`}
+      >
         <div className="flex justify-center w-full">
           <div className="flex w-full items-center 2xl:w-[1280px] gap-x-16">
             <div className="pl-12 xl:pl-32 2xl:pl-0">

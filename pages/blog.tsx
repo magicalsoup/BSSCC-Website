@@ -33,7 +33,7 @@ export default function Home({ allBlogData }) {
                 </p>
                 <MailButton
                   text="Join our Mailing List"
-                  tailwindCSS="bg-pink-500 text-white p-2"
+                  tailwindCSS="bg-pink-600 text-white p-2 hover:text-pink-600 hover:bg-white"
                   linkTo="http://google.com"
                 />
               </div>

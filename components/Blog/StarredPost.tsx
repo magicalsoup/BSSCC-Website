@@ -4,7 +4,7 @@ export default function StarredPost({post}) {
     const data = post.frontMatter
     return (
         <Link href={`/blog/${post.id}`}>
-            <a className="flex flex-col bg-blue-gray-700 w-full 2xl:max-w-[1280px]"> 
+            <a className="flex flex-col bg-blue-gray-700 w-full 2xl:max-w-[1280px] transition-all duration-500 ease-in-out hover:scale-[1.01]"> 
                 <img src={data.imgSrc} className="max-h-96 object-cover"/>
                 <div className="bg-transparent p-4">
                     <div className="flex flex-row space-x-2 text-gray-300 text-xs">

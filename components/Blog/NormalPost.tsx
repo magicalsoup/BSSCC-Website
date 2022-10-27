@@ -4,7 +4,7 @@ export default function NormalPost({ post }) {
   const data = post.frontMatter;
   return (
     <Link href={`/blog/${post.id}`}>
-      <a className="flex flex-col bg-blue-gray-700 w-full md:w-1/2">
+      <a className="flex flex-col bg-blue-gray-700 w-full md:w-1/2 transition-all duration-500 ease-in-out hover:scale-[1.01]">
         <img src={data.imgSrc} className="h-72 object-cover" />
         <div className="flex flex-col p-4">
           <div className="flex flex-row gap-x-2 text-gray-300 text-xs font-dmsans">

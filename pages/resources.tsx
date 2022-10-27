@@ -13,12 +13,11 @@ export default function Home({
     };
   }[];
 }) {
-
   return (
     <>
       <Head>
         <title>Resources</title>
-        <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
+        <link rel="icon" href="../bsscc_icon.png" sizes="128x128" />
       </Head>
       <Navbar />
       <main>
@@ -35,14 +34,17 @@ export default function Home({
                 <div className="flex flex-col pt-6 gap-y-6">
                   {sectionFolders.map((obj) => (
                     <Link href={`/resources/${obj.params.section}`}>
-                      <a className="bg-white text-blue-gray-900 text-xl lg:text-3xl font-bold font-raleway px-6 py-2 rounded-lg">
+                      <a className="bg-stone-200 text-blue-gray-900 text-xl lg:text-3xl font-bold font-raleway px-6 py-2 rounded-lg transition-all duration-200 ease-in-out hover:bg-blue-gray-500 hover:text-stone-200">
                         {obj.params.section}
                       </a>
                     </Link>
                   ))}
                 </div>
               </div>
-              <PolaroidLayer imgSrc="/images/polaroids/resources.jpg" responseWidth={640}/>
+              <PolaroidLayer
+                imgSrc="/images/polaroids/resources.jpg"
+                responseWidth={640}
+              />
             </div>
           </div>
         </div>
