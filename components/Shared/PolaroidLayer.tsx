@@ -32,7 +32,7 @@ export default function PolaroidLayer(props) {
   const matches = useMediaQuery(props.responseWidth);
   if (!matches) {
     return (
-      <div className="relative w-1/2">
+      <div className="relative flex items-center w-1/2">
         <div className="absolute right-0 origin-center -rotate-12">
           <Polaroid imgSrc={props.imgSrc} />
         </div>

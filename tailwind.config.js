@@ -13,6 +13,9 @@ module.exports = {
           }
         }
       }),
+      backgroundImage: theme => ({
+        'closing-bracket': "url('/images/blog/closing_bracket.jpg')",
+      }),
       colors: {
         "blue-gray-500": "#64748B",
         "blue-gray-600": "#475569",

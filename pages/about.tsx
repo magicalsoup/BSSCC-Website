@@ -28,6 +28,7 @@ export default function Home() {
     <>
       <Head>
         <title>Who we are</title>
+        <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
       <Navbar />
       <main>

@@ -18,10 +18,11 @@ export default function Home({
     <>
       <Head>
         <title>Resources</title>
+        <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
       <Navbar />
       <main>
-        <div className="flex flex-col items-center px-8 md:px-16 lg:px-32 py-32 h-screen bg-blue-gray-900">
+        <div className="flex flex-col items-center px-8 md:px-16 xl:px-32 py-32 h-screen bg-blue-gray-900">
           <div className="w-full 2xl:w-[1280px]">
             <div className="flex">
               <div className="flex flex-col items-center sm:items-start w-full py-8 md:w-1/2">
@@ -31,10 +32,10 @@ export default function Home({
                 <p className="font-dmsans text-white text-md md:text-lg sm:pt-2 md:pt-4">
                   Complementary resources for our meeetings.
                 </p>
-                <div className="flex flex-col pt-6">
+                <div className="flex flex-col pt-6 gap-y-6">
                   {sectionFolders.map((obj) => (
                     <Link href={`/resources/${obj.params.section}`}>
-                      <a className="text-white text-xl lg:text-3xl font-bold font-dmsans py-2 lg:py-6 white-to-blue-gradient w-fit">
+                      <a className="bg-white text-blue-gray-900 text-xl lg:text-3xl font-bold font-raleway px-6 py-2 rounded-lg">
                         {obj.params.section}
                       </a>
                     </Link>

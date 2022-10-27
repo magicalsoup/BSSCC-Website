@@ -9,6 +9,7 @@ export default function Home({ section, sectionResourceData }) {
     <>
       <Head>
         <title>{section}</title>
+        <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
       <Navbar />
       <main>

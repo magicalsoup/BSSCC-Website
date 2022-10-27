@@ -14,6 +14,7 @@ export default function Post({ section, frontMatter, source }) {
     <>
       <Head>
         <title>{frontMatter.title}</title>
+        <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
       <Navbar />
       <main>

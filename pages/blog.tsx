@@ -6,22 +6,20 @@ import NormalPost from "../components/Blog/NormalPost";
 import MailButton from "../components/Shared/MailButton";
 import Navbar from "../components/Shared/Navbar";
 
-
 export default function Home({ allBlogData }) {
   const blogName = "{Closing Bracket}";
-  // TODO need to swap null with a dummy in case there are no posts
-  const starredPost = allBlogData ? allBlogData[0] : null;
+  const starredPost = allBlogData.length > 0 ? allBlogData[0] : null;
   return (
     <>
       <Head>
         <title>{blogName}</title>
+        <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
       <Navbar />
       <main>
         <div className="flex flex-col min-h-screen bg-blue-gray-900 py-20">
-          <div className="flex bg-white backdrop-blur-2xl py-8 sm:py-20">
-            {/*TODO add background img*/}
-            <div className="flex flex-col 2xl:items-center bg-black/70 w-full py-6 px-4 sm:px-8 md:px-12 lg:px-32">
+          <div className="flex bg-closing-bracket bg-cover bg-center backdrop-blur-2xl py-8 sm:py-20">
+            <div className="flex flex-col 2xl:items-center backdrop-blur-md bg-black/70 w-full py-6 px-4 sm:px-8 md:px-12 lg:px-32">
               <div className="2xl:w-[1280px]">
                 <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold blue-to-white-gradient py-2 font-raleway">
                   {blogName}
@@ -41,14 +39,16 @@ export default function Home({ allBlogData }) {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-y-6 md:gap-y-12 items-center px-4 sm:px-8 md:px-12 lg:px-32 py-20">
-            <StarredPost post={starredPost} />
-            <div className="flex flex-col md:flex-row w-full 2xl:w-[1280px] gap-y-6 gap-x-6">
-              {allBlogData.slice(1).map((item, index) => (
-                <NormalPost post={item} key={index} />
-              ))}
+          {allBlogData.length > 0 && (
+            <div className="flex flex-col gap-y-6 md:gap-y-12 items-center px-4 sm:px-8 md:px-12 lg:px-32 py-20">
+              <StarredPost post={starredPost} />
+              <div className="flex flex-col md:flex-row w-full 2xl:w-[1280px] gap-y-6 gap-x-6">
+                {allBlogData.slice(1).map((item, index) => (
+                  <NormalPost post={item} key={index} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </main>
       <style jsx>

@@ -5,7 +5,7 @@ import Navbar from "../components/Shared/Navbar";
 import UpdateBoard from "../components/Index/UpdateBoard";
 import { getAllSortedPostsData } from "../lib/posts";
 import PolaroidLayer from "../components/Shared/PolaroidLayer";
-
+import { FaDiscord, FaInstagram } from "react-icons/fa";
 export default function Home({
   allPostsData,
 }: {
@@ -19,15 +19,15 @@ export default function Home({
     type: string;
   }[];
 }) {
-
   return (
     <>
       <Head>
         <title>BSSCC</title>
+        <link rel="icon" href="../bsscc_icon.png" sizes="128x128" />
       </Head>
       <Navbar />
       <main>
-        <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 px-6 sm:px-12 xl:px-32 py-24 sm:py-36">
+        <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 px-6 sm:px-12 xl:px-32 py-24 sm:py-40">
           <div className="2xl:w-[1280px] space-y-16 md:space-y-24">
             <div className="flex gap-x-2 lg:pb-24">
               <div className="flex flex-col w-full sm:w-[640px]">
@@ -55,16 +55,20 @@ export default function Home({
               />
             </div>
 
-
             <div className="flex flex-col">
-              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold py-8 sm:pb-12 font-raleway">Recent Updates</h1>
+              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold py-8 sm:pb-12 font-raleway">
+                Recent Updates
+              </h1>
               <UpdateBoard allPostsData={allPostsData} />
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">Join our Mailing List</h1>
+              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
+                Join our Mailing List
+              </h1>
               <p className="text-white py-4 sm:py-8 text-md sm:text-lg font-dmsans">
-                Join our mailing list to recieve email notifications about important news and upcoming events!
+                Join our mailing list to recieve email notifications about
+                important news and upcoming events!
               </p>
               <MailButton
                 text="Subscribe"
@@ -74,10 +78,22 @@ export default function Home({
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">Connect With Us!</h1>
-              <p className="text-white py-4 sm:py-8 text-md sm:text-lg font-dmsans">Drop by any of our social media outlets to learn more about us,
-                keep up-to-date with our upcoming events or to chat with our members!
+              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
+                Connect With Us!
+              </h1>
+              <p className="text-white py-4 sm:py-8 text-md sm:text-lg font-dmsans">
+                Drop by any of our social media outlets to learn more about us,
+                keep up-to-date with our upcoming events or to chat with our
+                members!
               </p>
+              <div className="flex gap-x-8">
+                <a href="https://discord.gg/3cuc9zzS4a" className="bg-sky-50 p-2 rounded-md">
+                  <FaDiscord className="text-5xl text-blue-gray-900"/>
+                </a>
+                <a href="https://www.instagram.com/bayviewcomputerclub/" className="bg-sky-50 p-2 rounded-md">
+                  <FaInstagram className="text-5xl text-blue-gray-900"/>
+                </a>
+              </div>
             </div>
           </div>
         </div>
