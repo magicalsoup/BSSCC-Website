@@ -62,14 +62,14 @@ export default function Hamburger() {
           .drawer {
             transition: transform var(--trans), opacity var(--trans),
               border var(--trans), background var(--trans);
-            padding: 1rem;
+            padding: 0.8rem;
             right: 0;
             background: var(--drawer-bg);
             border: 1px solid var(--drawer-border-bg);
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-radius: 0.5rem;
+            /*border-radius: 0.5rem;*/
             width: 12rem;
 
             --drawer-drop-color: gray;
