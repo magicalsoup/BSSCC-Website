@@ -32,8 +32,8 @@ export default function Home({
                   Complementary resources for our meeetings.
                 </p>
                 <div className="flex flex-col pt-6 gap-y-6">
-                  {sectionFolders.map((obj) => (
-                    <Link href={`/resources/${obj.params.section}`}>
+                  {sectionFolders.map((obj, index) => (
+                    <Link href={`/resources/${obj.params.section}`} key={index}>
                       <a className="bg-stone-200 text-blue-gray-900 text-xl lg:text-3xl font-bold font-raleway px-6 py-2 rounded-lg transition-all duration-200 ease-in-out hover:bg-blue-gray-500 hover:text-stone-200">
                         {obj.params.section}
                       </a>

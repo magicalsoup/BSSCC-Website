@@ -34,7 +34,6 @@ export default function Navbar() {
   useEffect(() => {
     function setBackground() {
       if (typeof window !== "undefined") {
-        console.log(window.scrollY);
         if (window.scrollY > 100) {
           setNavbarBackground("bg-blue-gray-600");
         } else {

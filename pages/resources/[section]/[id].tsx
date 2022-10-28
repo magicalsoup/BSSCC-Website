@@ -33,12 +33,12 @@ export default function Post({ section, frontMatter, source }) {
             />
           </div> */}
 
-          <div className="prose text-gray-900 sm:prose-lg font-dmsans">
+          <article className="prose text-gray-900 sm:prose-lg font-dmsans">
             <MDXRemote {...source} components={components} />
             <Link href={`/resources/${section}`}>
               <a className="text-sky-600 font-bold">← Back to {section}</a>
             </Link>
-          </div>
+          </article>
         </div>
       </main>
     </>

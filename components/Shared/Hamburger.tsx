@@ -28,7 +28,7 @@ export default function Hamburger() {
       </label>
       <div className="drawer prose dark:prose-invert">
         {links.map((item, index) => (
-          <li className="m-0">
+          <li className="m-0" key={index}>
             <a
               href={item[1]}
               className="p-2 flex gap-3 items-center font-raleway font-bold text-lg"

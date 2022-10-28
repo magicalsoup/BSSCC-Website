@@ -31,7 +31,7 @@ export default function PostAuthors({ authors }) {
         <div className="flex w-full py-1.5" key={index}>
           <div className="pr-4 ">
             <div
-              className="outline outline-1 outline-offset-2 rounded-full"
+              className="outline outline-1 p-0.5 rounded-full"
             >
               <img
                 className="w-10 h-10 rounded-full object-scale-down"
