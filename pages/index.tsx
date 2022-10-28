@@ -31,23 +31,27 @@ export default function Home({
           <div className="2xl:w-[1280px] space-y-16 md:space-y-24">
             <div className="flex gap-x-2 lg:pb-24">
               <div className="flex flex-col w-full sm:w-[640px]">
-                <h1 className="text-4xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient py-4 font-raleway">
+                <h1 className="text-3xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient py-4 font-raleway">
                   Bayview's <br></br>
                   student-organized <br></br>
                   computing community
                 </h1>
-                <div className="space-x-6">
-                  <MailButton
-                    text="Join Our Meetings"
-                    linkTo="http://google.com"
-                    tailwindCSS="bg-pink-600 text-white p-2 hover:text-pink-600 hover:bg-white"
-                  />
-                  <MailButton
-                    text="Signup For Our Mailing List"
-                    tailwindCSS="bg-transparent text-white p-2 hover:bg-sky-50 hover:text-blue-gray-900
-                    outline outline-1 outline-white outline-offset-[-1px]"
-                    linkTo="http://google.com"
-                  />
+                <div className="flex">
+                  <div className="pr-4 pb-1">
+                    <MailButton
+                      text="Join Our Meetings"
+                      linkTo="http://google.com"
+                      tailwindCSS="bg-pink-600 text-white p-2 hover:text-pink-600 hover:bg-white"
+                    />
+                  </div>
+                  <div className="">
+                    <MailButton
+                      text="Signup For Our Mailing List"
+                      tailwindCSS="bg-transparent text-white p-2 hover:bg-sky-50 hover:text-blue-gray-900
+                      outline outline-1 outline-white outline-offset-[-1px]"
+                      linkTo="http://google.com"
+                    />
+                  </div>
                 </div>
               </div>
               <PolaroidLayer

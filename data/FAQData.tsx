@@ -9,7 +9,7 @@ export const FAQ_DATA = [
         content: "wednesdays and fridays",
     },
     {
-        title: "Why should I join the club if I'm big brain",
+        title: "Why should I join the club if I'm big brain Why should I join the club if I'm big brain",
         content: "because your brain is not big enough",
     },
     {

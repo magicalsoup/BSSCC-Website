@@ -34,7 +34,7 @@ export default function Home() {
       <main>
         <div className="flex flex-col 2xl:items-center bg-blue-gray-900 px-4 sm:px-8 lg:px-16 xl:px-32 py-32">
           <div className="2xl:w-[1280px]">
-            <div className="flex justify-center md:justify-start py-8 md:pb-24">
+            <div className="flex justify-center md:justify-start py-8 px-2 md:pb-24">
               <div className="flex flex-col w-96 md:w-fit md:max-w-lg">
                 <h1 className="sm:py-4 text-3xl md:text-5xl white-to-pink-gradient font-raleway font-bold">
                   Our Mission

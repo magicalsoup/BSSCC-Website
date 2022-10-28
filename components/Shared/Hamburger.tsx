@@ -1,10 +1,11 @@
-import { IconType } from "react-icons";
 import { FaPencilAlt } from "react-icons/fa";
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
 import { AiOutlineTeam } from "react-icons/ai";
+import { BiHomeAlt } from "react-icons/bi";
 
 export default function Hamburger() {
   const links: [string, string, JSX.Element][] = [
+    ["Home" ,"/", <BiHomeAlt />],
     ["About", "/about", <AiOutlineTeam />],
     ["Blog", "/blog", <FaPencilAlt />],
     ["Resources", "/resources", <BsFillJournalBookmarkFill />],

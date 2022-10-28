@@ -25,13 +25,13 @@ export default function Post({ section, frontMatter, source }) {
             date={frontMatter.date}
           />
 
-          <div className="py-4">
+          {/* <div className="py-4">
             <iframe
               src={frontMatter.slidesSrc}
               className="w-[480px] h-[300px] lg:w-[960px] lg:h-[570px] 2xl:w-[1440px] 2xl:w-[840px]"
               allowFullScreen={true}
             />
-          </div>
+          </div> */}
 
           <div className="prose text-gray-900 prose-lg font-dmsans">
             <MDXRemote {...source} components={components} />
