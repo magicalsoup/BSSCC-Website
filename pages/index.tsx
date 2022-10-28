@@ -31,7 +31,7 @@ export default function Home({
           <div className="2xl:w-[1280px] space-y-16 md:space-y-24">
             <div className="flex gap-x-2 lg:pb-24">
               <div className="flex flex-col w-full sm:w-[640px]">
-                <h1 className="text-3xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient py-4 font-raleway">
+                <h1 className="text-3xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient pb-8 font-raleway">
                   Bayview's <br></br>
                   student-organized <br></br>
                   computing community
@@ -68,10 +68,10 @@ export default function Home({
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
+              <h1 className="text-white py-4 text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
                 Join our Mailing List
               </h1>
-              <p className="text-white py-4 sm:py-8 text-md sm:text-lg font-dmsans">
+              <p className="text-white py-2 text-md sm:text-lg font-dmsans">
                 Join our mailing list to recieve email notifications about
                 important news and upcoming events!
               </p>
@@ -83,10 +83,10 @@ export default function Home({
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
+              <h1 className="text-white py-4 text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
                 Connect With Us!
               </h1>
-              <p className="text-white py-4 sm:py-8 text-md sm:text-lg font-dmsans">
+              <p className="text-white py-2 text-md sm:text-lg font-dmsans">
                 Drop by any of our social media outlets to learn more about us,
                 keep up-to-date with our upcoming events or to chat with our
                 members!
