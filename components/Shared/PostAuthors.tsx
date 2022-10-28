@@ -29,11 +29,11 @@ export default function PostAuthors({ authors }) {
     <div className="flex flex-col w-fit text-sm py-4">
       {authorData.map((author, index) => (
         <div className="flex w-full py-1.5" key={index}>
-          <div className="pr-4 rounded-full bg-rose-200">
-            <div className=" overflow-hidden"
+          <div className="pr-4">
+            <div className="rounded-full bg-rose-200 outline outline-1"
             style={{borderRadius: "999px"}}>
               <img
-                className="w-10 h-10 rounded-full outline outline-1 p-0.5 bject-scale-down"
+                className="w-10 h-10 rounded-full p-0.5 object-scale-down"
                 src={author.photo}
               />
             </div>
