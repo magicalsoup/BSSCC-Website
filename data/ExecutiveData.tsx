@@ -13,29 +13,29 @@ Mr Smintinch - Supervisor
 
 export const EXECUTIVE_DATA = [
     {
-        name: "Austin Zeng",
-        role: "President",
-        photo: "/images/executives/Austin_Zeng.jpg",
+        name: "Lakshy-Gupta",
+        role: "Executive",
+        photo: "/images/executives/Lakshy-Gupta.jpg",
         
     },
     {
-        name: "Stephen Tang",
+        name: "Jaden Zhang",
         role: "General Executive",
-        photo: "/images/executives/Stephen_Tang.jpg",
+        photo: "/images/executives/Jaden-Zhang.jpg",
     },
     {
-        name: "Daniel Chen",
+        name: "Yuming He",
         role: "Competitive Executive",
-        photo: "/images/executives/Daniel_Chen.webp",
+        photo: "/images/executives/Yuming-He.jpg",
     },   
     {
         name: "Fiona Cai",
         role: "PR Officer",
-        photo: "/images/executives/Fiona_Cai.jpg"
+        photo: "/images/executives/Fiona-Cai.jpg"
     },
     {
         name: "Gloria Li",
         role: "PR Officer",
-        photo: "/images/executives/Gloria_Li.webp"
+        photo: "/images/executives/Gloria-Li.jpg"
     }
 ]

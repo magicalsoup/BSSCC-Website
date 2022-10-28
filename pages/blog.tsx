@@ -17,7 +17,7 @@ export default function Home({ allBlogData }) {
       </Head>
       <Navbar />
       <main>
-        <div className="flex flex-col min-h-screen bg-blue-gray-900 py-20">
+        <div className="flex flex-col min-h-screen bg-blue-gray-900 pt-20">
           <div className="flex bg-closing-bracket bg-cover bg-center backdrop-blur-2xl py-8 sm:py-20">
             <div className="flex flex-col 2xl:items-center backdrop-blur-md bg-black/70 w-full py-6 px-4 sm:px-8 md:px-12 lg:px-32">
               <div className="2xl:w-[1280px]">

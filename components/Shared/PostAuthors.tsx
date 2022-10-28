@@ -32,7 +32,7 @@ export default function PostAuthors({ authors }) {
           <div className="pr-4">
             <div className={`rounded-full ring ring-offset-2 ring-2 ${getPhotoRingStyle(author.role)}`}>
               <img
-                className="w-10 h-10 rounded-full object-scale-down"
+                className="w-10 h-10 rounded-full object-cover"
                 src={author.photo}
               />
             </div>

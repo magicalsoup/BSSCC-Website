@@ -55,7 +55,7 @@ export default function Home({
                 </div>
               </div>
               <PolaroidLayer
-                imgSrc="/images/polaroids/index.webp"
+                imgSrc="/images/polaroids/index.jpg"
                 responseWidth={768}
               />
             </div>
