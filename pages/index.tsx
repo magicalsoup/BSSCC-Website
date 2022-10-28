@@ -36,7 +36,7 @@ export default function Home({
                   student-organized <br></br>
                   computing community
                 </h1>
-                <div className="flex">
+                <div className="flex flex-wrap">
                   <div className="pr-4 pb-1">
                     <MailButton
                       text="Join Our Meetings"

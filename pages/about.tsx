@@ -39,7 +39,7 @@ export default function Home() {
                 <h1 className="sm:py-4 text-3xl md:text-5xl white-to-pink-gradient font-raleway font-bold">
                   Our Mission
                 </h1>
-                <p className="py-4 text-md lg:text-lg text-white font-dmsans w-96 lg:w-fit">
+                <p className="py-4 text-md lg:text-lg text-white font-dmsans sm:w-96 lg:w-fit">
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco

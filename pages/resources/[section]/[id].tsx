@@ -18,7 +18,7 @@ export default function Post({ section, frontMatter, source }) {
       </Head>
       <Navbar />
       <main>
-        <div className="flex flex-col items-center py-32 px-24 bg-orange-50">
+        <div className="flex flex-col items-center py-32 px-4 sm:px-24 bg-orange-50">
           <PostBanter
             authors={frontMatter.authors}
             title={frontMatter.title}
@@ -33,7 +33,7 @@ export default function Post({ section, frontMatter, source }) {
             />
           </div> */}
 
-          <div className="prose text-gray-900 prose-lg font-dmsans">
+          <div className="prose text-gray-900 sm:prose-lg font-dmsans">
             <MDXRemote {...source} components={components} />
             <Link href={`/resources/${section}`}>
               <a className="text-sky-600 font-bold">← Back to {section}</a>
