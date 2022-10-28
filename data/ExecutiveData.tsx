@@ -15,27 +15,27 @@ export const EXECUTIVE_DATA = [
     {
         name: "Lakshy-Gupta",
         role: "Executive",
-        photo: "/images/executives/Lakshy-Gupta.jpg",
+        photo: "/images/executives/Lakshy-Gupta.JPG",
         
     },
     {
         name: "Jaden Zhang",
         role: "General Executive",
-        photo: "/images/executives/Jaden-Zhang.jpg",
+        photo: "/images/executives/Jaden-Zhang.JPG",
     },
     {
         name: "Yuming He",
         role: "Competitive Executive",
-        photo: "/images/executives/Yuming-He.jpg",
+        photo: "/images/executives/Yuming-He.JPG",
     },   
     {
         name: "Fiona Cai",
         role: "PR Officer",
-        photo: "/images/executives/Fiona-Cai.jpg"
+        photo: "/images/executives/Fiona-Cai.JPG"
     },
     {
         name: "Gloria Li",
         role: "PR Officer",
-        photo: "/images/executives/Gloria-Li.jpg"
+        photo: "/images/executives/Gloria-Li.JPG"
     }
 ]
