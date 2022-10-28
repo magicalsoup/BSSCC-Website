@@ -130,7 +130,7 @@ export default function Hamburger() {
 
           .drawer li a:hover,
           .drawer li a:active {
-            --drawer-active-color: lightgray;
+            --drawer-active-color: #0f172a;
             background: var(--drawer-active-color);
           }
 
