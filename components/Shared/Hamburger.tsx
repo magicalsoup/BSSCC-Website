@@ -1,8 +1,13 @@
+import { IconType } from "react-icons";
+import { FaPencilAlt } from "react-icons/fa";
+import { BsFillJournalBookmarkFill } from "react-icons/bs";
+import { AiOutlineTeam } from "react-icons/ai";
+
 export default function Hamburger() {
-  const links = [
-    ["About", "/about"],
-    ["Blog", "/blog"],
-    ["Resources", "/resources"],
+  const links: [string, string, JSX.Element][] = [
+    ["About", "/about", <AiOutlineTeam />],
+    ["Blog", "/blog", <FaPencilAlt />],
+    ["Resources", "/resources", <BsFillJournalBookmarkFill />],
   ];
   return (
     <div className="hamburger flex">
@@ -25,8 +30,9 @@ export default function Hamburger() {
           <li className="m-0">
             <a
               href={item[1]}
-              className="p-2 flex gap-1 font-raleway font-bold text-lg"
+              className="p-2 flex gap-3 items-center font-raleway font-bold text-lg"
             >
+              {item[2]}
               {item[0]}
             </a>
             {index !== links.length - 1 ? <hr className="m-2" /> : null}
