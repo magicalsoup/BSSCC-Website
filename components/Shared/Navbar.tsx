@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+import Hamburger from "./Hamburger";
 export default function Navbar() {
   const useMediaQuery = (width: number) => {
     const [targetReached, setTargetReached] = useState(false);
@@ -61,7 +62,7 @@ export default function Navbar() {
                 </a>
               </Link>
             </div>
-            <div className="">{/*TODO implement hamburger menu*/}</div>
+            <Hamburger />
           </div>
         </div>
       </div>
