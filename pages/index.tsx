@@ -94,13 +94,13 @@ export default function Home({
               <div className="flex gap-x-8">
                 <a
                   href="https://discord.gg/3cuc9zzS4a"
-                  className="transition-all duration-200 bg-sky-50 p-2 rounded-md lg:hover:bg-blue-gray-500 text-blue-gray-900 lg:hover:text-sky-50 lg:hover:scale-105"
+                  className="transition-all duration-200 bg-sky-50 p-2 rounded-2xl lg:hover:bg-blue-gray-500 text-blue-gray-900 lg:hover:text-sky-50 lg:hover:scale-105"
                 >
                   <FaDiscord className="text-3xl md:text-4xl lg:text-5xl" />
                 </a>
                 <a
                   href="https://www.instagram.com/bayviewcomputerclub/"
-                  className="transition-all duration-200 bg-sky-50 p-2 rounded-md lg:hover:bg-blue-gray-500 text-blue-gray-900 lg:hover:text-sky-50 lg:hover:scale-105"
+                  className="transition-all duration-200 bg-sky-50 p-2 rounded-2xl lg:hover:bg-blue-gray-500 text-blue-gray-900 lg:hover:text-sky-50 lg:hover:scale-105"
                 >
                   <FaInstagram className="text-3xl md:text-4xl lg:text-5xl" />
                 </a>

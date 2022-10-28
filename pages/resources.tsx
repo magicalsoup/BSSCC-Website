@@ -19,7 +19,7 @@ export default function Home({
         <title>Resources</title>
         <link rel="icon" href="../bsscc_icon.png" sizes="128x128" />
       </Head>
-      <Navbar />
+      <Navbar pageNum={3}/>
       <main>
         <div className="flex flex-col items-center px-8 md:px-16 xl:px-32 py-32 h-screen bg-blue-gray-900">
           <div className="w-full 2xl:w-[1280px]">

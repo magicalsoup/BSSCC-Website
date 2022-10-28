@@ -30,7 +30,7 @@ export default function Home() {
         <title>Who we are</title>
         <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
-      <Navbar />
+      <Navbar pageNum={1}/>
       <main>
         <div className="flex flex-col 2xl:items-center bg-blue-gray-900 px-4 sm:px-8 lg:px-16 xl:px-32 py-32">
           <div className="2xl:w-[1280px]">

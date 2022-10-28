@@ -11,7 +11,7 @@ export default function Home({ section, sectionResourceData }) {
         <title>{section}</title>
         <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
-      <Navbar />
+      <Navbar pageNum={3}/>
       <main>
         <div className="flex flex-col 2xl:items-center min-h-screen pb-32 bg-blue-gray-900 py-32">
           <div className="2xl:w-[1280px]">

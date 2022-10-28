@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
-export default function Navbar() {
+export default function Navbar({pageNum}) {
   const useMediaQuery = (width: number) => {
     const [targetReached, setTargetReached] = useState(false);
 
@@ -30,6 +30,18 @@ export default function Navbar() {
   };
   const match = useMediaQuery(640);
 
+  // 1 = about page
+  // 2 = blog
+  // 3 = resources
+  const getNavBarElementStyle = (num: number) => {
+    let backgroundColor = "bg-blue-gray-900";
+    if (num === pageNum) {
+      backgroundColor = "bg-blue-gray-700";
+    }
+    return `ransition-all duration-500 ease-in-out 
+    rounded-md py-2 px-6 text-white font-bold hover:bg-blue-gray-700 ${backgroundColor}`;
+  };
+
   if (match) {
     return (
       <div>
@@ -51,7 +63,7 @@ export default function Navbar() {
     return (
       <div className="flex fixed w-full justify-center pt-3 pb-2 z-40 bg-blue-gray-900 font-raleway">
         <div className="flex justify-center w-full">
-          <div className="flex w-full items-center 2xl:w-[1280px] gap-x-16">
+          <div className="flex w-full items-center 2xl:w-[1280px] gap-x-24">
             <div className="pl-12 xl:pl-32 2xl:pl-0">
               <Link href="/">
                 <a>
@@ -59,15 +71,15 @@ export default function Navbar() {
                 </a>
               </Link>
             </div>
-            <div>
+            <div className="space-x-20">
               <Link href="/about">
-                <a className="text-white font-bold px-12">About</a>
+                <a className={getNavBarElementStyle(1)}>About</a>
               </Link>
               <Link href="/blog">
-                <a className="text-white font-bold px-12">Blog</a>
+                <a className={getNavBarElementStyle(2)}>Blog</a>
               </Link>
               <Link href="/resources">
-                <a className="text-white font-bold px-12">Resources</a>
+                <a className={getNavBarElementStyle(3)}>Resources</a>
               </Link>
             </div>
           </div>

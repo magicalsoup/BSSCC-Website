@@ -13,9 +13,9 @@ export default function Post({ frontMatter, source }) {
         <title>{frontMatter.title}</title>
         <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
-      <Navbar />
+      <Navbar pageNum={2}/>
       <main>
-        <div className="flex flex-col bg-orange-50 items-center px-8 py-24 sm:py-32 sm:px-24">
+        <div className="flex flex-col bg-orange-50 min-h-screen items-center px-8 py-24 sm:py-32 sm:px-24">
           <PostBanter
             authors={frontMatter.authors}
             title={frontMatter.title}

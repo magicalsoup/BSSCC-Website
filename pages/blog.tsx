@@ -15,7 +15,7 @@ export default function Home({ allBlogData }) {
         <title>{blogName}</title>
         <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
       </Head>
-      <Navbar />
+      <Navbar pageNum={2}/>
       <main>
         <div className="flex flex-col min-h-screen bg-blue-gray-900 pt-20">
           <div className="flex bg-closing-bracket bg-cover bg-center backdrop-blur-2xl py-8 sm:py-20">
