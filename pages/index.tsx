@@ -37,7 +37,7 @@ export default function Home({
                   computing community
                 </h1>
                 <div className="flex flex-wrap">
-                  <div className="pr-4 pb-1">
+                  <div className="pr-4 pb-2">
                     <MailButton
                       text="Join Our Meetings"
                       linkTo="http://google.com"
@@ -94,13 +94,13 @@ export default function Home({
               <div className="flex gap-x-8">
                 <a
                   href="https://discord.gg/3cuc9zzS4a"
-                  className="transition-all duration-200 bg-sky-50 p-2 rounded-md hover:bg-blue-gray-500 text-blue-gray-900 hover:text-sky-50 hover:scale-105"
+                  className="transition-all duration-200 bg-sky-50 p-2 rounded-md lg:hover:bg-blue-gray-500 text-blue-gray-900 lg:hover:text-sky-50 lg:hover:scale-105"
                 >
                   <FaDiscord className="text-5xl " />
                 </a>
                 <a
                   href="https://www.instagram.com/bayviewcomputerclub/"
-                  className="transition-all duration-200 bg-sky-50 p-2 rounded-md hover:bg-blue-gray-500 text-blue-gray-900 hover:text-sky-50 hover:scale-105"
+                  className="transition-all duration-200 bg-sky-50 p-2 rounded-md lg:hover:bg-blue-gray-500 text-blue-gray-900 lg:hover:text-sky-50 lg:hover:scale-105"
                 >
                   <FaInstagram className="text-5xl" />
                 </a>
