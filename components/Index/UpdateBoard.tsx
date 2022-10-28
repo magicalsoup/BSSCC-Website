@@ -37,8 +37,8 @@ export default function UpdateBoard({ allPostsData }) {
   } 
 
   return (
-    <div className="bg-white/10 lg:p-12 rounded-xl">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="bg-white/10 p-2 lg:p-8 xl:p-12 rounded-xl">
+      <div className="grid justify-around grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3">
         {allPostsData.slice(0, total_cards).map((post, index) => (
           <BoardItem
             key={index}

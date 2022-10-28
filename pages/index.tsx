@@ -27,7 +27,7 @@ export default function Home({
       </Head>
       <Navbar />
       <main>
-        <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 px-6 sm:px-12 xl:px-32 py-24 sm:py-40">
+        <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 px-5 sm:px-10 md:px-12 xl:px-32 py-24 sm:py-40">
           <div className="2xl:w-[1280px] space-y-16 md:space-y-24">
             <div className="flex gap-x-2 lg:pb-24">
               <div className="flex flex-col w-full sm:w-[640px]">
@@ -61,17 +61,17 @@ export default function Home({
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold py-8 sm:pb-12 font-raleway">
+              <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold py-8 font-raleway">
                 Recent Updates
               </h1>
               <UpdateBoard allPostsData={allPostsData} />
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white py-4 text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
+              <h1 className="text-white pb-4 text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
                 Join our Mailing List
               </h1>
-              <p className="text-white py-2 text-md sm:text-lg font-dmsans">
+              <p className="text-white py-2 text-sm sm:text-md md:text-lg font-dmsans">
                 Join our mailing list to recieve email notifications about
                 important news and upcoming events!
               </p>
@@ -83,10 +83,10 @@ export default function Home({
             </div>
 
             <div className="flex flex-col">
-              <h1 className="text-white py-4 text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
+              <h1 className="text-white pb-4 text-xl sm:text-2xl lg:text-3xl font-bold font-raleway">
                 Connect With Us!
               </h1>
-              <p className="text-white py-2 text-md sm:text-lg font-dmsans">
+              <p className="text-white py-2 text-sm sm:text-md md:text-lg font-dmsans">
                 Drop by any of our social media outlets to learn more about us,
                 keep up-to-date with our upcoming events or to chat with our
                 members!
@@ -96,13 +96,13 @@ export default function Home({
                   href="https://discord.gg/3cuc9zzS4a"
                   className="transition-all duration-200 bg-sky-50 p-2 rounded-md lg:hover:bg-blue-gray-500 text-blue-gray-900 lg:hover:text-sky-50 lg:hover:scale-105"
                 >
-                  <FaDiscord className="text-5xl" />
+                  <FaDiscord className="text-3xl md:text-4xl lg:text-5xl" />
                 </a>
                 <a
                   href="https://www.instagram.com/bayviewcomputerclub/"
                   className="transition-all duration-200 bg-sky-50 p-2 rounded-md lg:hover:bg-blue-gray-500 text-blue-gray-900 lg:hover:text-sky-50 lg:hover:scale-105"
                 >
-                  <FaInstagram className="text-5xl" />
+                  <FaInstagram className="text-3xl md:text-4xl lg:text-5xl" />
                 </a>
               </div>
             </div>
