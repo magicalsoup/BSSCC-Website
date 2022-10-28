@@ -31,7 +31,7 @@ export default function Home({
           <div className="2xl:w-[1280px] space-y-16 md:space-y-24">
             <div className="flex gap-x-2 lg:pb-24">
               <div className="flex flex-col w-full sm:w-[640px]">
-                <h1 className="text-3xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient pb-8 font-raleway">
+                <h1 className="text-3xl lg:text-5xl lg:leading-[70px] font-bold white-to-blue-gradient pb-10 font-raleway">
                   Bayview's <br></br>
                   student-organized <br></br>
                   computing community
