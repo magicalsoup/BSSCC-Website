@@ -25,7 +25,7 @@ export default function Home({
         <title>BSSCC</title>
         <link rel="icon" href="../bsscc_icon.png" sizes="128x128" />
       </Head>
-      <Navbar />
+      <Navbar pageNum={0} /> {/*Special case no highlight*/}
       <main>
         <div className="flex flex-col 2xl:items-center min-h-screen bg-blue-gray-900 px-5 sm:px-10 md:px-12 xl:px-32 py-24 sm:py-40">
           <div className="2xl:w-[1280px] space-y-16 md:space-y-24">
