@@ -12,7 +12,7 @@ export const EXECUTIVE_DATA = [
     {
         name: "Owen Guo",
         role: "General Executive",
-        photo: "/images/executives/Alex Xu.png",
+        photo: "/images/executives/Alex Xu.PNG",
     },   
     {
         name: "Applearon",
@@ -32,7 +32,7 @@ export const EXECUTIVE_DATA = [
     {
         name: "Alex Xu",
         role: "Competitive Executive",
-        photo: "/images/executives/Alex Xu.png",
+        photo: "/images/executives/Alex Xu.PNG",
     },
     {
         name: "Jaden Zhang",

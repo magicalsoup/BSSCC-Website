@@ -28,9 +28,9 @@ export default function Home() {
     <>
       <Head>
         <title>Who we are</title>
-        <link rel="icon" href="../bsscc_icon.png" sizes="128x128"/>
+        <link rel="icon" href="../bsscc_icon.png" sizes="128x128" />
       </Head>
-      <Navbar pageNum={1}/>
+      <Navbar pageNum={1} />
       <main>
         <div className="flex flex-col 2xl:items-center bg-blue-gray-900 px-4 sm:px-8 lg:px-16 xl:px-32 py-32">
           <div className="2xl:w-[1280px]">
@@ -65,7 +65,7 @@ export default function Home() {
               </h1>
 
               <PresidentCard
-                photoSrc="/images/executives/Austin Zeng.png"
+                photoSrc="/images/executives/Austin Zeng.PNG"
                 name="Austin Zeng"
                 description="life is nice."
                 flexDirection=""
