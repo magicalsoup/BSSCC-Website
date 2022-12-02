@@ -6,7 +6,7 @@ export const EXECUTIVE_DATA = [
     {
         name: "Fiona Cai",
         role: "General Executive",
-        photo: "/images/executives/Fiona Cai.JPeG",
+        photo: "/images/executives/Fiona Cai.jpeg",
         
     },
     {
@@ -41,12 +41,12 @@ export const EXECUTIVE_DATA = [
     },
     {
         name: "Gloria Li",
-        role: "Competitive Executive",
+        role: "PR Officer",
         photo: "/images/executives/Fiona Cai.JPeG",
     },
     {
         name: "Karen Lin",
-        role: "Competitive Executive",
+        role: "PR Officer",
         photo: "/images/executives/Karen Lin.JPG",
     },
         
