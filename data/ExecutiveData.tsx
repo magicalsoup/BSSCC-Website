@@ -12,7 +12,7 @@ export const EXECUTIVE_DATA = [
     {
         name: "Owen Guo",
         role: "General Executive",
-        photo: "/images/executives/Alex Xu.png",
+        photo: "/images/executives/Alex Xu.PNG",
     },   
     {
         name: "Applearon",
@@ -22,7 +22,7 @@ export const EXECUTIVE_DATA = [
     {
         name: "Kevin Tang",
         role: "General Executive",
-        photo: "/images/executives/Kevin Tang.JPG"
+        photo: "/images/executives/Kevin Tang.jpg"
     },
     {
         name: "Hidden Cactus",
@@ -37,17 +37,17 @@ export const EXECUTIVE_DATA = [
     {
         name: "Jaden Zhang",
         role: "Competitive Executive",
-        photo: "/images/executives/Jaden Zhang.JPG",
+        photo: "/images/executives/Jaden Zhang.jpg",
     },
     {
         name: "Gloria Li",
         role: "PR Officer",
-        photo: "/images/executives/Fiona Cai.JPeG",
+        photo: "/images/executives/Fiona Cai.jpeg",
     },
     {
         name: "Karen Lin",
         role: "PR Officer",
-        photo: "/images/executives/Karen Lin.JPG",
+        photo: "/images/executives/Karen Lin.jpg",
     },
         
 ]
