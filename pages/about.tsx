@@ -65,14 +65,14 @@ export default function Home() {
               </h1>
 
               <PresidentCard
-                photoSrc="/images/executives/James-Su.JPG"
-                name="James Su"
+                photoSrc="/images/executives/Austin Zeng.png"
+                name="Austin Zeng"
                 description="life is nice."
                 flexDirection=""
               />
 
               <PresidentCard
-                photoSrc="/images/executives/Derrick-Ha.JPG"
+                photoSrc="/images/executives/Derrick Ha.JPG"
                 name="Derrick Ha"
                 description="life is very nice."
                 flexDirection="flex-row-reverse"
