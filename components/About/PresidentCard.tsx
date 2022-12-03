@@ -52,6 +52,7 @@ export default function PresidentCard({
           </h1>
           <p className="text-lg text-white font-dmsans">
             {description}
+            
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -69,6 +70,7 @@ export default function PresidentCard({
         </h1>
         <p className="text-white font-dmsans text-center px-4">
             {description}
+
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

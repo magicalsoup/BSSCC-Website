@@ -67,14 +67,14 @@ export default function Home() {
               <PresidentCard
                 photoSrc="/images/executives/Austin Zeng.PNG"
                 name="Austin Zeng"
-                description="life is nice."
+                description="Enter description here"
                 flexDirection=""
               />
 
               <PresidentCard
                 photoSrc="/images/executives/Derrick Ha.JPG"
                 name="Derrick Ha"
-                description="life is very nice."
+                description="Enter description here"
                 flexDirection="flex-row-reverse"
               />
             </div>

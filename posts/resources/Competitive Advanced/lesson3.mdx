@@ -2,8 +2,38 @@
 title: "Lesson 3 prefix sum arrays"
 date: "2019-01-02"
 authors: "Daniel Chen"
-blurb: "adding up sums"
+blurb: "Learn how to quickly do range sum queries."
 ---
 
+### Building the data structure
 
-EWWWWWWWW
+Let's build the data structure, first we understand we let our prefix sum array (psa) be defined as:
+
+- psa[0] = 1.
+- psa[i] = psa[i-1] for any index i in [1, n], where n is the length of the list.
+
+
+Then we can build our data structure as follows:
+```cpp
+for(int i=1; i<=n; i++) {
+    psa[i] += psa[i-1]
+}
+```
+
+### Querying range queries:
+
+Given an interval [l, r], our sum is then calculated as follows:
+
+```
+sum = psa[r] - psa[l-1]
+```
+
+We can see that prefix sum arrays are very powerful, and have many applications in competitive programming problems.
+You can practice this data structure in the problems provided below:
+
+### Problems
+- [Problem 1](https://dmoj.ca/)
+- [Problem 2](https://dmoj.ca/)
+- [Problem 3](https://dmoj.ca/)
+
+

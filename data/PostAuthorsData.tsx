@@ -1,22 +1,22 @@
 export const POST_AUTHORS = [
     {
         name: "Austin Zeng",
-        role: "Executive",
-        photo: "/images/executives/James-Su.jpg",
+        role: "President",
+        photo: "/images/executives/Austin Zeng.PNG",
         
     },
     {
         name: "James Su",
         role: "Previous Executive",
-        photo: "/images/executives/James-Su.jpg",
+        photo: "/images/authors/James Su.jpg",
     },
     {
         name: "Daniel Chen",
-        role: "President",
-        photo: "/images/executives/James-Su.jpg",
+        role: "Previous Executive",
+        photo: "/images/authors/Daniel Chen.png",
     },   
     {
-        name: "nextJs Dev",
+        name: "NEXTJS Developer",
         role: "Developer",
         photo: "/images/authors/nextJS-Dev.webp"
     }
